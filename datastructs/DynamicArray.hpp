@@ -5,26 +5,30 @@
 
 template <typename T> // template (not inheritance, cause a stack isn't a
                       // dynamic array)
+
 class DynamicArray {
 private:
   T *data;
   size_t size;
   size_t capacity;
 
+  void grow();
+
 public:
-  DynamicArray();  // constructor
-  ~DynamicArray(); // destructor
+  // Rule of 5
+  DynamicArray();                                         // constructor
+  ~DynamicArray();                                        // destructor
+  DynamicArray(const DynamicArray &other);                // copy constuctor
+  DynamicArray &operator=(const DynamicArray &other);     // copy assignment
+  DynamicArray(DynamicArray &&other) noexcept;            // move constructor
+  DynamicArray &operator=(DynamicArray &&other) noexcept; // move assignment
 
-  DynamicArray(const DynamicArray &other);
-  DynamicArray &operator=(const DynamicArray &other);
-
-  void push_back(const T &value); // push a value to the dynamic array
-  void pop_back();                // pop a value out
-
+  // Access & Modifiers
+  void push_back(const T &value);          // push a value to the dynamic array
+  void pop_back();                         // pop a value out
   T &operator[](size_t index);             // [] for changing
   const T &operator[](size_t index) const; // [] for accessing
-
-  size_t get_size() const; // size
+  size_t get_size() const;                 // size
 };
 
 #include "DynamicArray.tpp" // implementations in the template file
