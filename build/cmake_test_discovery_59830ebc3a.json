@@ -1,0 +1,89 @@
+{
+  "tests": 13,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "Complex",
+      "tests": 5,
+      "testsuite": [
+        {
+          "name": "Constructors",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_complex.cpp",
+          "line": 4
+        },
+        {
+          "name": "Arithmetic",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_complex.cpp",
+          "line": 14
+        },
+        {
+          "name": "Division",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_complex.cpp",
+          "line": 31
+        },
+        {
+          "name": "Scalar",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_complex.cpp",
+          "line": 41
+        },
+        {
+          "name": "Math",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_complex.cpp",
+          "line": 49
+        }
+      ]
+    },
+    {
+      "name": "String",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "Constructor",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_string.cpp",
+          "line": 5
+        },
+        {
+          "name": "CopyConstructor",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_string.cpp",
+          "line": 11
+        },
+        {
+          "name": "Assignment",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_string.cpp",
+          "line": 18
+        },
+        {
+          "name": "Indexing",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_string.cpp",
+          "line": 26
+        }
+      ]
+    },
+    {
+      "name": "DynamicArray",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "PushBackAndSize",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_dynamic_array.cpp",
+          "line": 4
+        },
+        {
+          "name": "PopBack",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_dynamic_array.cpp",
+          "line": 15
+        },
+        {
+          "name": "CopyConstructor",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_dynamic_array.cpp",
+          "line": 26
+        },
+        {
+          "name": "Assignment",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_dynamic_array.cpp",
+          "line": 36
+        }
+      ]
+    }
+  ]
+}

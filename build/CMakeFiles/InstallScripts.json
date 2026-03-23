@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/squid2010/Projects/quell/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
