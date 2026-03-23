@@ -24,6 +24,7 @@ public:
   DynamicArray &operator=(DynamicArray &&other) noexcept; // move assignment
 
   // Access & Modifiers
+  void resize(size_t new_capacity);        // resize the capacity of the array
   void push_back(const T &value);          // push a value to the dynamic array
   void pop_back();                         // pop a value out
   T &operator[](size_t index);             // [] for changing

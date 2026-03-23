@@ -1,11 +1,11 @@
 // Constructors
-template <typename T> DynamicArray<T>::DynamicArray { // default constructor
+template <typename T> DynamicArray<T>::DynamicArray() { // default constructor
   size = 0;
   capacity = 1;
   data = new T[capacity];
 }
 
-template <typename T> DynamicArray<T>::~DynamicArray { // destructor
+template <typename T> DynamicArray<T>::~DynamicArray() { // destructor
   delete[] data;
 }
 
@@ -22,7 +22,8 @@ DynamicArray<T>::DynamicArray(const DynamicArray &other) { // copy constructor
 }
 
 template <typename T>
-DynamicArray<T>::DynamicArray(DynamicArray &&other) { // move constructor
+DynamicArray<T>::DynamicArray(
+    DynamicArray &&other) noexcept { // move constructor
   data = other.data;
   size = other.size;
   capacity = other.capacity;
@@ -56,7 +57,7 @@ DynamicArray<T>::operator=(const DynamicArray &other) { // Copy assignment
 
 template <typename T>
 DynamicArray<T> &
-DynamicArray<T>::operator=(DynamicArray &&other) { // Move assignment
+DynamicArray<T>::operator=(DynamicArray &&other) noexcept { // Move assignment
   if (this == &other) {
     return *this;
   }
