@@ -1,3 +1,0 @@
-/home/squid2010/Projects/quell/build/CMakeFiles/tests.dir
-/home/squid2010/Projects/quell/build/CMakeFiles/edit_cache.dir
-/home/squid2010/Projects/quell/build/CMakeFiles/rebuild_cache.dir

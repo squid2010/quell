@@ -1,32 +1,42 @@
 #include "../datastructs/String.hpp"
-#include <cstring>
 #include <gtest/gtest.h>
 
-TEST(String, Constructor) {
+TEST(StringTest, DefaultConstructor) {
+  String s;
+  EXPECT_EQ(s.size(), 0);
+  EXPECT_STREQ(s.c_str(), "");
+}
+
+TEST(StringTest, ConstructorFromCStr) {
   String s("hello");
   EXPECT_EQ(s.size(), 5);
   EXPECT_STREQ(s.c_str(), "hello");
 }
 
-TEST(String, CopyConstructor) {
-  String a("test");
-  String b = a;
-
-  EXPECT_STREQ(b.c_str(), "test");
+TEST(StringTest, CopyConstructor) {
+  String s1("test");
+  String s2(s1);
+  EXPECT_EQ(s2.size(), 4);
+  EXPECT_STREQ(s2.c_str(), "test");
 }
 
-TEST(String, Assignment) {
-  String a("one");
-  String b("two");
-
-  b = a;
-  EXPECT_STREQ(b.c_str(), "one");
+TEST(StringTest, AssignmentOperator) {
+  String s1("foo");
+  String s2;
+  s2 = s1;
+  EXPECT_EQ(s2.size(), 3);
+  EXPECT_STREQ(s2.c_str(), "foo");
 }
 
-TEST(String, Indexing) {
+TEST(StringTest, AccessOperators) {
   String s("abc");
+  s[0] = 'x';
+  EXPECT_EQ(s[0], 'x');
+  EXPECT_EQ(s[1], 'b');
+  EXPECT_EQ(s[2], 'c');
 
-  EXPECT_EQ(s[0], 'a');
-  s[1] = 'z';
-  EXPECT_EQ(s[1], 'z');
+  const String cs("xyz");
+  EXPECT_EQ(cs[0], 'x');
+  EXPECT_EQ(cs[1], 'y');
+  EXPECT_EQ(cs[2], 'z');
 }

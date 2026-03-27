@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/squid2010/Projects/quell/build/_deps/googletest-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

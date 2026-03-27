@@ -1,21 +1,38 @@
-cmake_minimum_required(VERSION 3.14)
-project(DataStructTests)
+cmake_minimum_required(VERSION 3.16)
 
-set(CMAKE_CXX_STANDARD 17)
+project(Quell LANGUAGES CXX) # Project Name
 
-find_package(GTest REQUIRED)
+set(CMAKE_CXX_STANDARD 17) # use C++17
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
-include_directories(datastructs)
+include_directories(${PROJECT_SOURCE_DIR}/datastructs) # include work without relative paths
 
-add_executable(tests
-    tests/test_complex.cpp
-    tests/test_string.cpp
-    tests/test_dynamic_array.cpp
+include(FetchContent) # fetch googletest automatically from github
+FetchContent_Declare(
+    googletest
+    URL https://github.com/google/googletest/archive/refs/tags/release-1.14.0.zip
+)
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(googletest)
+
+enable_testing()
+
+set(DATASOURCE_FILES # add cpp, .tpp don't need cause in headers
     datastructs/Complex.cpp
     datastructs/String.cpp
 )
 
-target_link_libraries(tests GTest::gtest_main)
+set(TEST_FILES # add tests
+    tests/test_complex.cpp
+    tests/test_dynamic_array.cpp
+    tests/test_stack.cpp
+    tests/test_string.cpp
+)
 
-include(GoogleTest)
-gtest_discover_tests(tests)
+add_executable(run_tests ${DATASOURCE_FILES} ${TEST_FILES}) # make an executable named run_tests
+
+target_link_libraries(run_tests gtest_main) # link GoogleTest function + library
+
+include(GoogleTest) # discover TEST() cases automatically
+gtest_discover_tests(run_tests)

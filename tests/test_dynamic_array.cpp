@@ -1,9 +1,8 @@
 #include "../datastructs/DynamicArray.hpp"
 #include <gtest/gtest.h>
 
-TEST(DynamicArray, PushBackAndSize) {
+TEST(DynamicArrayTest, PushAndAccess) {
   DynamicArray<int> arr;
-
   arr.push_back(10);
   arr.push_back(20);
 
@@ -12,34 +11,54 @@ TEST(DynamicArray, PushBackAndSize) {
   EXPECT_EQ(arr[1], 20);
 }
 
-TEST(DynamicArray, PopBack) {
+TEST(DynamicArrayTest, PopBack) {
   DynamicArray<int> arr;
+  arr.push_back(5);
+  arr.push_back(15);
 
-  arr.push_back(1);
-  arr.push_back(2);
   arr.pop_back();
-
   EXPECT_EQ(arr.get_size(), 1);
-  EXPECT_EQ(arr[0], 1);
+  EXPECT_EQ(arr[0], 5);
 }
 
-TEST(DynamicArray, CopyConstructor) {
-  DynamicArray<int> a;
-  a.push_back(5);
+TEST(DynamicArrayTest, CopyConstructor) {
+  DynamicArray<int> arr1;
+  arr1.push_back(1);
+  arr1.push_back(2);
 
-  DynamicArray<int> b = a;
-
-  EXPECT_EQ(b.get_size(), 1);
-  EXPECT_EQ(b[0], 5);
+  DynamicArray<int> arr2 = arr1;
+  EXPECT_EQ(arr2.get_size(), 2);
+  EXPECT_EQ(arr2[0], 1);
+  EXPECT_EQ(arr2[1], 2);
 }
 
-TEST(DynamicArray, Assignment) {
-  DynamicArray<int> a;
-  a.push_back(7);
+TEST(DynamicArrayTest, CopyAssignment) {
+  DynamicArray<int> arr1;
+  arr1.push_back(3);
+  arr1.push_back(4);
 
-  DynamicArray<int> b;
-  b = a;
+  DynamicArray<int> arr2;
+  arr2 = arr1;
 
-  EXPECT_EQ(b.get_size(), 1);
-  EXPECT_EQ(b[0], 7);
+  EXPECT_EQ(arr2.get_size(), 2);
+  EXPECT_EQ(arr2[0], 3);
+  EXPECT_EQ(arr2[1], 4);
+}
+
+TEST(DynamicArrayTest, MoveConstructor) {
+  DynamicArray<int> arr1;
+  arr1.push_back(1);
+  arr1.push_back(2);
+
+  DynamicArray<int> arr2 = std::move(arr1);
+  EXPECT_EQ(arr2.get_size(), 2);
+}
+
+TEST(DynamicArrayTest, MoveAssignment) {
+  DynamicArray<int> arr1;
+  arr1.push_back(5);
+
+  DynamicArray<int> arr2;
+  arr2 = std::move(arr1);
+  EXPECT_EQ(arr2.get_size(), 1);
 }
