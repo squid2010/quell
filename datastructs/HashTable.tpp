@@ -1,3 +1,5 @@
+// TODO:comment
+
 template <typename Key, typename Value, typename Hash, typename KeyEqual>
 HashTable<Key, Value, Hash, KeyEqual>::HashTable(size_t initial_bucket_count)
     : buckets(), element_count(0), max_load_factor(0.75) {
