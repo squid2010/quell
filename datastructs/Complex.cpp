@@ -52,15 +52,21 @@ void Complex::operator-=(const Complex &other) { // -=
 }
 
 void Complex::operator*=(const Complex &other) { // *=
-  real = real * other.real - imaginary * other.imaginary;
-  imaginary = real * other.imaginary + imaginary * other.real;
+  double r = real;
+  double i = imaginary;
+
+  real = r * other.real - i * other.imaginary;
+  imaginary = r * other.imaginary + i * other.real;
 }
 
 void Complex::operator/=(const Complex &other) { // /=
+  double r = real;
+  double i = imaginary;
+
   double denom = other.real * other.real + other.imaginary * other.imaginary;
 
-  real = (real * other.real + imaginary * other.imaginary) / denom;
-  imaginary = (imaginary * other.real - real * other.imaginary) / denom;
+  real = (r * other.real + i * other.imaginary) / denom;
+  imaginary = (i * other.real - r * other.imaginary) / denom;
 }
 
 void Complex::operator*=(double scalar) { // *= but with scalar

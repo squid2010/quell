@@ -1,0 +1,160 @@
+{
+  "tests": 26,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "ComplexTest",
+      "tests": 10,
+      "testsuite": [
+        {
+          "name": "DefaultConstructor",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_complex.cpp",
+          "line": 5
+        },
+        {
+          "name": "ConstructorValues",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_complex.cpp",
+          "line": 11
+        },
+        {
+          "name": "Addition",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_complex.cpp",
+          "line": 17
+        },
+        {
+          "name": "Subtraction",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_complex.cpp",
+          "line": 24
+        },
+        {
+          "name": "Multiplication",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_complex.cpp",
+          "line": 31
+        },
+        {
+          "name": "Division",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_complex.cpp",
+          "line": 38
+        },
+        {
+          "name": "ScalarMultiplication",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_complex.cpp",
+          "line": 45
+        },
+        {
+          "name": "CompoundOperators",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_complex.cpp",
+          "line": 52
+        },
+        {
+          "name": "Comparisons",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_complex.cpp",
+          "line": 75
+        },
+        {
+          "name": "MathFunctions",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_complex.cpp",
+          "line": 82
+        }
+      ]
+    },
+    {
+      "name": "DynamicArrayTest",
+      "tests": 6,
+      "testsuite": [
+        {
+          "name": "PushAndAccess",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_dynamic_array.cpp",
+          "line": 4
+        },
+        {
+          "name": "PopBack",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_dynamic_array.cpp",
+          "line": 14
+        },
+        {
+          "name": "CopyConstructor",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_dynamic_array.cpp",
+          "line": 24
+        },
+        {
+          "name": "CopyAssignment",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_dynamic_array.cpp",
+          "line": 35
+        },
+        {
+          "name": "MoveConstructor",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_dynamic_array.cpp",
+          "line": 48
+        },
+        {
+          "name": "MoveAssignment",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_dynamic_array.cpp",
+          "line": 57
+        }
+      ]
+    },
+    {
+      "name": "StackTest",
+      "tests": 5,
+      "testsuite": [
+        {
+          "name": "PushPopPeek",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_stack.cpp",
+          "line": 4
+        },
+        {
+          "name": "PopEmptyThrows",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_stack.cpp",
+          "line": 18
+        },
+        {
+          "name": "PeekEmptyThrows",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_stack.cpp",
+          "line": 23
+        },
+        {
+          "name": "ConstPeek",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_stack.cpp",
+          "line": 28
+        },
+        {
+          "name": "LIFOOrder",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_stack.cpp",
+          "line": 35
+        }
+      ]
+    },
+    {
+      "name": "StringTest",
+      "tests": 5,
+      "testsuite": [
+        {
+          "name": "DefaultConstructor",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_string.cpp",
+          "line": 4
+        },
+        {
+          "name": "ConstructorFromCStr",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_string.cpp",
+          "line": 10
+        },
+        {
+          "name": "CopyConstructor",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_string.cpp",
+          "line": 16
+        },
+        {
+          "name": "AssignmentOperator",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_string.cpp",
+          "line": 23
+        },
+        {
+          "name": "AccessOperators",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_string.cpp",
+          "line": 31
+        }
+      ]
+    }
+  ]
+}

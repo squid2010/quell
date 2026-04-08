@@ -35,6 +35,16 @@ String &String::operator=(const String &other) {
   return *this;
 }
 
+bool String::operator==(const String &other) const { // equality operator
+  if (length != other.length)
+    return false;
+  return std::strcmp(data, other.data) == 0;
+}
+
+bool String::operator!=(const String &other) const { // not equals
+  return !(*this == other);
+}
+
 // getters
 size_t String::size() const { return length; }
 

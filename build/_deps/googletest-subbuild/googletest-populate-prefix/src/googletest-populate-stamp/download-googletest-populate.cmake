@@ -22,14 +22,14 @@ function(check_file_hash has_hash hash_is_good)
   set("${has_hash}" TRUE PARENT_SCOPE)
 
   message(VERBOSE "verifying file...
-       file='/home/squid2010/Projects/quell/build/_deps/googletest-subbuild/googletest-populate-prefix/src/release-1.14.0.zip'")
+       file='/home/squid2010/Projects/quell/build/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip'")
 
-  file("" "/home/squid2010/Projects/quell/build/_deps/googletest-subbuild/googletest-populate-prefix/src/release-1.14.0.zip" actual_value)
+  file("" "/home/squid2010/Projects/quell/build/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip" actual_value)
 
   if(NOT "${actual_value}" STREQUAL "")
     set("${hash_is_good}" FALSE PARENT_SCOPE)
     message(VERBOSE " hash of
-    /home/squid2010/Projects/quell/build/_deps/googletest-subbuild/googletest-populate-prefix/src/release-1.14.0.zip
+    /home/squid2010/Projects/quell/build/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip
   does not match expected value
     expected: ''
       actual: '${actual_value}'")
@@ -71,32 +71,32 @@ function(sleep_before_download attempt)
   execute_process(COMMAND "${CMAKE_COMMAND}" -E sleep "${sleep_seconds}")
 endfunction()
 
-if(EXISTS "/home/squid2010/Projects/quell/build/_deps/googletest-subbuild/googletest-populate-prefix/src/release-1.14.0.zip")
+if(EXISTS "/home/squid2010/Projects/quell/build/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip")
   check_file_hash(has_hash hash_is_good)
   if(has_hash)
     if(hash_is_good)
       message(VERBOSE "File already exists and hash match (skip download):
-  file='/home/squid2010/Projects/quell/build/_deps/googletest-subbuild/googletest-populate-prefix/src/release-1.14.0.zip'
+  file='/home/squid2010/Projects/quell/build/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip'
   =''"
       )
       return()
     else()
       message(VERBOSE "File already exists but hash mismatch. Removing...")
-      file(REMOVE "/home/squid2010/Projects/quell/build/_deps/googletest-subbuild/googletest-populate-prefix/src/release-1.14.0.zip")
+      file(REMOVE "/home/squid2010/Projects/quell/build/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip")
     endif()
   else()
     message(VERBOSE "File already exists but no hash specified (use URL_HASH):
-  file='/home/squid2010/Projects/quell/build/_deps/googletest-subbuild/googletest-populate-prefix/src/release-1.14.0.zip'
+  file='/home/squid2010/Projects/quell/build/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip'
 Old file will be removed and new file downloaded from URL."
     )
-    file(REMOVE "/home/squid2010/Projects/quell/build/_deps/googletest-subbuild/googletest-populate-prefix/src/release-1.14.0.zip")
+    file(REMOVE "/home/squid2010/Projects/quell/build/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip")
   endif()
 endif()
 
 set(retry_number 5)
 
 message(VERBOSE "Downloading...
-   dst='/home/squid2010/Projects/quell/build/_deps/googletest-subbuild/googletest-populate-prefix/src/release-1.14.0.zip'
+   dst='/home/squid2010/Projects/quell/build/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip'
    timeout='none'
    inactivity timeout='none'"
 )
@@ -107,7 +107,7 @@ foreach(i RANGE ${retry_number})
   if(status_code IN_LIST download_retry_codes)
     sleep_before_download(${i})
   endif()
-  foreach(url IN ITEMS [====[https://github.com/google/googletest/archive/refs/tags/release-1.14.0.zip]====])
+  foreach(url IN ITEMS [====[https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip]====])
     if(NOT url IN_LIST skip_url_list)
       message(VERBOSE "Using src='${url}'")
 
@@ -119,7 +119,7 @@ foreach(i RANGE ${retry_number})
 
       file(
         DOWNLOAD
-        "${url}" "/home/squid2010/Projects/quell/build/_deps/googletest-subbuild/googletest-populate-prefix/src/release-1.14.0.zip"
+        "${url}" "/home/squid2010/Projects/quell/build/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip"
         SHOW_PROGRESS
         # no TIMEOUT
         # no INACTIVITY_TIMEOUT
@@ -136,7 +136,7 @@ foreach(i RANGE ${retry_number})
         check_file_hash(has_hash hash_is_good)
         if(has_hash AND NOT hash_is_good)
           message(VERBOSE "Hash mismatch, removing...")
-          file(REMOVE "/home/squid2010/Projects/quell/build/_deps/googletest-subbuild/googletest-populate-prefix/src/release-1.14.0.zip")
+          file(REMOVE "/home/squid2010/Projects/quell/build/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip")
         else()
           message(VERBOSE "Downloading... done")
           return()

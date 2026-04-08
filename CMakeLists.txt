@@ -11,7 +11,7 @@ include_directories(${PROJECT_SOURCE_DIR}/datastructs) # include work without re
 include(FetchContent) # fetch googletest automatically from github
 FetchContent_Declare(
     googletest
-    URL https://github.com/google/googletest/archive/refs/tags/release-1.14.0.zip
+    URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip
 )
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
