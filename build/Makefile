@@ -260,6 +260,30 @@ datastructs/Complex.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/Complex.cpp.s
 .PHONY : datastructs/Complex.cpp.s
 
+datastructs/Matrix.o: datastructs/Matrix.cpp.o
+.PHONY : datastructs/Matrix.o
+
+# target to build an object file
+datastructs/Matrix.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/Matrix.cpp.o
+.PHONY : datastructs/Matrix.cpp.o
+
+datastructs/Matrix.i: datastructs/Matrix.cpp.i
+.PHONY : datastructs/Matrix.i
+
+# target to preprocess a source file
+datastructs/Matrix.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/Matrix.cpp.i
+.PHONY : datastructs/Matrix.cpp.i
+
+datastructs/Matrix.s: datastructs/Matrix.cpp.s
+.PHONY : datastructs/Matrix.s
+
+# target to generate assembly for a file
+datastructs/Matrix.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/Matrix.cpp.s
+.PHONY : datastructs/Matrix.cpp.s
+
 datastructs/String.o: datastructs/String.cpp.o
 .PHONY : datastructs/String.o
 
@@ -332,6 +356,30 @@ tests/test_dynamic_array.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_dynamic_array.cpp.s
 .PHONY : tests/test_dynamic_array.cpp.s
 
+tests/test_matrix.o: tests/test_matrix.cpp.o
+.PHONY : tests/test_matrix.o
+
+# target to build an object file
+tests/test_matrix.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_matrix.cpp.o
+.PHONY : tests/test_matrix.cpp.o
+
+tests/test_matrix.i: tests/test_matrix.cpp.i
+.PHONY : tests/test_matrix.i
+
+# target to preprocess a source file
+tests/test_matrix.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_matrix.cpp.i
+.PHONY : tests/test_matrix.cpp.i
+
+tests/test_matrix.s: tests/test_matrix.cpp.s
+.PHONY : tests/test_matrix.s
+
+# target to generate assembly for a file
+tests/test_matrix.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_matrix.cpp.s
+.PHONY : tests/test_matrix.cpp.s
+
 tests/test_stack.o: tests/test_stack.cpp.o
 .PHONY : tests/test_stack.o
 
@@ -401,6 +449,9 @@ help:
 	@echo "... datastructs/Complex.o"
 	@echo "... datastructs/Complex.i"
 	@echo "... datastructs/Complex.s"
+	@echo "... datastructs/Matrix.o"
+	@echo "... datastructs/Matrix.i"
+	@echo "... datastructs/Matrix.s"
 	@echo "... datastructs/String.o"
 	@echo "... datastructs/String.i"
 	@echo "... datastructs/String.s"
@@ -410,6 +461,9 @@ help:
 	@echo "... tests/test_dynamic_array.o"
 	@echo "... tests/test_dynamic_array.i"
 	@echo "... tests/test_dynamic_array.s"
+	@echo "... tests/test_matrix.o"
+	@echo "... tests/test_matrix.i"
+	@echo "... tests/test_matrix.s"
 	@echo "... tests/test_stack.o"
 	@echo "... tests/test_stack.i"
 	@echo "... tests/test_stack.s"

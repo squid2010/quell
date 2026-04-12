@@ -1,5 +1,5 @@
 {
-  "tests": 26,
+  "tests": 40,
   "name": "AllTests",
   "testsuites": [
     {
@@ -91,6 +91,82 @@
           "name": "MoveAssignment",
           "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_dynamic_array.cpp",
           "line": 57
+        }
+      ]
+    },
+    {
+      "name": "MatrixTest",
+      "tests": 14,
+      "testsuite": [
+        {
+          "name": "DefaultConstructor",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_matrix.cpp",
+          "line": 4
+        },
+        {
+          "name": "ConstructorValues",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_matrix.cpp",
+          "line": 12
+        },
+        {
+          "name": "Identity",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_matrix.cpp",
+          "line": 21
+        },
+        {
+          "name": "Addition",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_matrix.cpp",
+          "line": 30
+        },
+        {
+          "name": "Subtraction",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_matrix.cpp",
+          "line": 43
+        },
+        {
+          "name": "Multiplication",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_matrix.cpp",
+          "line": 56
+        },
+        {
+          "name": "ScalarMultiplication",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_matrix.cpp",
+          "line": 69
+        },
+        {
+          "name": "Determinant",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_matrix.cpp",
+          "line": 80
+        },
+        {
+          "name": "Trace",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_matrix.cpp",
+          "line": 87
+        },
+        {
+          "name": "Transpose",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_matrix.cpp",
+          "line": 93
+        },
+        {
+          "name": "Conjugate",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_matrix.cpp",
+          "line": 104
+        },
+        {
+          "name": "Hermitian",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_matrix.cpp",
+          "line": 115
+        },
+        {
+          "name": "Inverse",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_matrix.cpp",
+          "line": 126
+        },
+        {
+          "name": "Equality",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_matrix.cpp",
+          "line": 138
         }
       ]
     },

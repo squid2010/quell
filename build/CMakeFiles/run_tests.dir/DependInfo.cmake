@@ -9,9 +9,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/squid2010/Projects/quell/datastructs/Complex.cpp" "CMakeFiles/run_tests.dir/datastructs/Complex.cpp.o" "gcc" "CMakeFiles/run_tests.dir/datastructs/Complex.cpp.o.d"
+  "/home/squid2010/Projects/quell/datastructs/Matrix.cpp" "CMakeFiles/run_tests.dir/datastructs/Matrix.cpp.o" "gcc" "CMakeFiles/run_tests.dir/datastructs/Matrix.cpp.o.d"
   "/home/squid2010/Projects/quell/datastructs/String.cpp" "CMakeFiles/run_tests.dir/datastructs/String.cpp.o" "gcc" "CMakeFiles/run_tests.dir/datastructs/String.cpp.o.d"
   "/home/squid2010/Projects/quell/tests/test_complex.cpp" "CMakeFiles/run_tests.dir/tests/test_complex.cpp.o" "gcc" "CMakeFiles/run_tests.dir/tests/test_complex.cpp.o.d"
   "/home/squid2010/Projects/quell/tests/test_dynamic_array.cpp" "CMakeFiles/run_tests.dir/tests/test_dynamic_array.cpp.o" "gcc" "CMakeFiles/run_tests.dir/tests/test_dynamic_array.cpp.o.d"
+  "/home/squid2010/Projects/quell/tests/test_matrix.cpp" "CMakeFiles/run_tests.dir/tests/test_matrix.cpp.o" "gcc" "CMakeFiles/run_tests.dir/tests/test_matrix.cpp.o.d"
   "/home/squid2010/Projects/quell/tests/test_stack.cpp" "CMakeFiles/run_tests.dir/tests/test_stack.cpp.o" "gcc" "CMakeFiles/run_tests.dir/tests/test_stack.cpp.o.d"
   "/home/squid2010/Projects/quell/tests/test_string.cpp" "CMakeFiles/run_tests.dir/tests/test_string.cpp.o" "gcc" "CMakeFiles/run_tests.dir/tests/test_string.cpp.o.d"
   "" "run_tests" "gcc" "CMakeFiles/run_tests.dir/link.d"
