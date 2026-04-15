@@ -284,6 +284,30 @@ datastructs/Matrix.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/Matrix.cpp.s
 .PHONY : datastructs/Matrix.cpp.s
 
+datastructs/RNG.o: datastructs/RNG.cpp.o
+.PHONY : datastructs/RNG.o
+
+# target to build an object file
+datastructs/RNG.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/RNG.cpp.o
+.PHONY : datastructs/RNG.cpp.o
+
+datastructs/RNG.i: datastructs/RNG.cpp.i
+.PHONY : datastructs/RNG.i
+
+# target to preprocess a source file
+datastructs/RNG.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/RNG.cpp.i
+.PHONY : datastructs/RNG.cpp.i
+
+datastructs/RNG.s: datastructs/RNG.cpp.s
+.PHONY : datastructs/RNG.s
+
+# target to generate assembly for a file
+datastructs/RNG.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/RNG.cpp.s
+.PHONY : datastructs/RNG.cpp.s
+
 datastructs/StateVector.o: datastructs/StateVector.cpp.o
 .PHONY : datastructs/StateVector.o
 
@@ -404,6 +428,30 @@ tests/test_matrix.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_matrix.cpp.s
 .PHONY : tests/test_matrix.cpp.s
 
+tests/test_rng.o: tests/test_rng.cpp.o
+.PHONY : tests/test_rng.o
+
+# target to build an object file
+tests/test_rng.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_rng.cpp.o
+.PHONY : tests/test_rng.cpp.o
+
+tests/test_rng.i: tests/test_rng.cpp.i
+.PHONY : tests/test_rng.i
+
+# target to preprocess a source file
+tests/test_rng.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_rng.cpp.i
+.PHONY : tests/test_rng.cpp.i
+
+tests/test_rng.s: tests/test_rng.cpp.s
+.PHONY : tests/test_rng.s
+
+# target to generate assembly for a file
+tests/test_rng.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_rng.cpp.s
+.PHONY : tests/test_rng.cpp.s
+
 tests/test_stack.o: tests/test_stack.cpp.o
 .PHONY : tests/test_stack.o
 
@@ -500,6 +548,9 @@ help:
 	@echo "... datastructs/Matrix.o"
 	@echo "... datastructs/Matrix.i"
 	@echo "... datastructs/Matrix.s"
+	@echo "... datastructs/RNG.o"
+	@echo "... datastructs/RNG.i"
+	@echo "... datastructs/RNG.s"
 	@echo "... datastructs/StateVector.o"
 	@echo "... datastructs/StateVector.i"
 	@echo "... datastructs/StateVector.s"
@@ -515,6 +566,9 @@ help:
 	@echo "... tests/test_matrix.o"
 	@echo "... tests/test_matrix.i"
 	@echo "... tests/test_matrix.s"
+	@echo "... tests/test_rng.o"
+	@echo "... tests/test_rng.i"
+	@echo "... tests/test_rng.s"
 	@echo "... tests/test_stack.o"
 	@echo "... tests/test_stack.i"
 	@echo "... tests/test_stack.s"

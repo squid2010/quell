@@ -1,5 +1,5 @@
 {
-  "tests": 50,
+  "tests": 59,
   "name": "AllTests",
   "testsuites": [
     {
@@ -167,6 +167,57 @@
           "name": "Equality",
           "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_matrix.cpp",
           "line": 138
+        }
+      ]
+    },
+    {
+      "name": "RNGTest",
+      "tests": 9,
+      "testsuite": [
+        {
+          "name": "DeterministicSeedingProducesSameSequence",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_rng.cpp",
+          "line": 7
+        },
+        {
+          "name": "UniformInUnitInterval",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_rng.cpp",
+          "line": 16
+        },
+        {
+          "name": "UniformInCustomRange",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_rng.cpp",
+          "line": 26
+        },
+        {
+          "name": "UniformIndexWithinBounds",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_rng.cpp",
+          "line": 36
+        },
+        {
+          "name": "UniformIndexZeroThrows",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_rng.cpp",
+          "line": 46
+        },
+        {
+          "name": "NormalDistributionRoughMeanCheck",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_rng.cpp",
+          "line": 51
+        },
+        {
+          "name": "DiscreteSamplingDeterministicSingleOutcome",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_rng.cpp",
+          "line": 66
+        },
+        {
+          "name": "DiscreteSamplingRoughDistributionCheck",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_rng.cpp",
+          "line": 79
+        },
+        {
+          "name": "SampleEmptyThrows",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_rng.cpp",
+          "line": 105
         }
       ]
     },
