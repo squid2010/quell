@@ -284,6 +284,30 @@ datastructs/Matrix.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/Matrix.cpp.s
 .PHONY : datastructs/Matrix.cpp.s
 
+datastructs/StateVector.o: datastructs/StateVector.cpp.o
+.PHONY : datastructs/StateVector.o
+
+# target to build an object file
+datastructs/StateVector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/StateVector.cpp.o
+.PHONY : datastructs/StateVector.cpp.o
+
+datastructs/StateVector.i: datastructs/StateVector.cpp.i
+.PHONY : datastructs/StateVector.i
+
+# target to preprocess a source file
+datastructs/StateVector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/StateVector.cpp.i
+.PHONY : datastructs/StateVector.cpp.i
+
+datastructs/StateVector.s: datastructs/StateVector.cpp.s
+.PHONY : datastructs/StateVector.s
+
+# target to generate assembly for a file
+datastructs/StateVector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/StateVector.cpp.s
+.PHONY : datastructs/StateVector.cpp.s
+
 datastructs/String.o: datastructs/String.cpp.o
 .PHONY : datastructs/String.o
 
@@ -404,6 +428,30 @@ tests/test_stack.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_stack.cpp.s
 .PHONY : tests/test_stack.cpp.s
 
+tests/test_statevector.o: tests/test_statevector.cpp.o
+.PHONY : tests/test_statevector.o
+
+# target to build an object file
+tests/test_statevector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_statevector.cpp.o
+.PHONY : tests/test_statevector.cpp.o
+
+tests/test_statevector.i: tests/test_statevector.cpp.i
+.PHONY : tests/test_statevector.i
+
+# target to preprocess a source file
+tests/test_statevector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_statevector.cpp.i
+.PHONY : tests/test_statevector.cpp.i
+
+tests/test_statevector.s: tests/test_statevector.cpp.s
+.PHONY : tests/test_statevector.s
+
+# target to generate assembly for a file
+tests/test_statevector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_statevector.cpp.s
+.PHONY : tests/test_statevector.cpp.s
+
 tests/test_string.o: tests/test_string.cpp.o
 .PHONY : tests/test_string.o
 
@@ -452,6 +500,9 @@ help:
 	@echo "... datastructs/Matrix.o"
 	@echo "... datastructs/Matrix.i"
 	@echo "... datastructs/Matrix.s"
+	@echo "... datastructs/StateVector.o"
+	@echo "... datastructs/StateVector.i"
+	@echo "... datastructs/StateVector.s"
 	@echo "... datastructs/String.o"
 	@echo "... datastructs/String.i"
 	@echo "... datastructs/String.s"
@@ -467,6 +518,9 @@ help:
 	@echo "... tests/test_stack.o"
 	@echo "... tests/test_stack.i"
 	@echo "... tests/test_stack.s"
+	@echo "... tests/test_statevector.o"
+	@echo "... tests/test_statevector.i"
+	@echo "... tests/test_statevector.s"
 	@echo "... tests/test_string.o"
 	@echo "... tests/test_string.i"
 	@echo "... tests/test_string.s"

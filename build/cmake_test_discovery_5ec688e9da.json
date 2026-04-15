@@ -1,5 +1,5 @@
 {
-  "tests": 40,
+  "tests": 50,
   "name": "AllTests",
   "testsuites": [
     {
@@ -198,6 +198,62 @@
           "name": "LIFOOrder",
           "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_stack.cpp",
           "line": 35
+        }
+      ]
+    },
+    {
+      "name": "StatevectorTest",
+      "tests": 10,
+      "testsuite": [
+        {
+          "name": "DefaultConstructorCreatesZeroState",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_statevector.cpp",
+          "line": 9
+        },
+        {
+          "name": "CustomAmplitudeConstructor",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_statevector.cpp",
+          "line": 25
+        },
+        {
+          "name": "Normalize",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_statevector.cpp",
+          "line": 37
+        },
+        {
+          "name": "InnerProductSelfEqualsOne",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_statevector.cpp",
+          "line": 49
+        },
+        {
+          "name": "InnerProductOrthogonalStates",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_statevector.cpp",
+          "line": 57
+        },
+        {
+          "name": "ApplyPauliX",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_statevector.cpp",
+          "line": 72
+        },
+        {
+          "name": "ApplyHadamard",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_statevector.cpp",
+          "line": 83
+        },
+        {
+          "name": "ApplyGateOnSpecificQubit",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_statevector.cpp",
+          "line": 97
+        },
+        {
+          "name": "InnerProductDimensionMismatchThrows",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_statevector.cpp",
+          "line": 114
+        },
+        {
+          "name": "InvalidQubitIndexThrows",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_statevector.cpp",
+          "line": 121
         }
       ]
     },

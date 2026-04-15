@@ -21,6 +21,7 @@ enable_testing()
 set(DATASOURCE_FILES # add cpp, .tpp don't need cause in headers
     datastructs/Complex.cpp
     datastructs/Matrix.cpp
+    datastructs/StateVector.cpp
     datastructs/String.cpp
 )
 
@@ -29,6 +30,7 @@ set(TEST_FILES # add tests
     tests/test_dynamic_array.cpp
     tests/test_matrix.cpp
     tests/test_stack.cpp
+    tests/test_statevector.cpp
     tests/test_string.cpp
 )
 
