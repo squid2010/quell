@@ -1,4 +1,5 @@
 #include "StateVector.hpp"
+#include "RNG.hpp"
 #include <cmath>
 #include <stdexcept>
 
@@ -53,6 +54,51 @@ void Statevector::normalize() { // normalize (divide by magnitutde)
 
   for (size_t i = 0; i < size(); ++i)
     data[i] *= (1 / norm);
+}
+
+size_t Statevector::measure(RNG &rng) {
+  size_t dim = dimension();
+  if (dim == 0) // can't measure nothing
+    throw std::runtime_error("Empty statevector");
+
+  // Build probability distribution
+  DynamicArray<double> probs;
+  probs.resize(dim);
+  double sum = 0.0;
+
+  for (size_t i = 0; i < dim; ++i) {
+    double p = data[i].norm(); // |amp|^2
+    probs.push_back(p);
+    sum += p;
+  }
+
+  // Normalize probs
+  if (sum <= 0.0)
+    throw std::runtime_error("Invalid quantum state (zero norm)");
+
+  for (size_t i = 0; i < dim; ++i) {
+    probs[i] /= sum;
+  }
+
+  // Sample outcome
+  size_t outcome = rng.sample(probs);
+
+  // Collapse state
+  for (size_t i = 0; i < dim; ++i) {
+    if (i != outcome)
+      data[i] = Complex(0.0, 0.0); // if not outcome, make everything else 0.0
+  }
+
+  // Renormalize state bc keep stable
+  double norm = data[outcome].abs();
+  if (norm == 0.0)
+    throw std::runtime_error("Collapse resulted in zero amplitude");
+
+  for (size_t i = 0; i < dim; ++i) {
+    data[i] = data[i] * (1.0 / norm);
+  }
+
+  return outcome;
 }
 
 Complex
