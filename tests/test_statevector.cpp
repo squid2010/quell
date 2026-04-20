@@ -1,5 +1,6 @@
 #include "../datastructs/Complex.hpp"
 #include "../datastructs/Matrix.hpp"
+#include "../datastructs/RNG.hpp"
 #include "../datastructs/StateVector.hpp"
 #include <cmath>
 #include <gtest/gtest.h>
@@ -124,4 +125,72 @@ TEST(StatevectorTest, InvalidQubitIndexThrows) {
   Matrix X(Complex(0, 0), Complex(1, 0), Complex(1, 0), Complex(0, 0));
 
   EXPECT_THROW(psi.apply_gate(X, 2), std::runtime_error);
+}
+
+TEST(StatevectorTest, MeasureBasisStateDeterministic) {
+  RNG rng(42);
+
+  Statevector psi(2); // |00>
+
+  size_t result = psi.measure(rng);
+
+  EXPECT_EQ(result, 0u);
+
+  // State remains |00>
+  EXPECT_NEAR(psi[0].get_real(), 1.0, EPS);
+  for (size_t i = 1; i < psi.size(); ++i)
+    EXPECT_NEAR(psi[i].get_real(), 0.0, EPS);
+}
+
+TEST(StatevectorTest, MeasureCollapsesState) {
+  RNG rng(42);
+
+  Statevector psi(1);
+
+  double inv_sqrt2 = 1.0 / std::sqrt(2.0);
+  Matrix H(Complex(inv_sqrt2, 0), Complex(inv_sqrt2, 0), Complex(inv_sqrt2, 0),
+           Complex(-inv_sqrt2, 0));
+
+  psi.apply_gate(H, 0);
+
+  size_t result = psi.measure(rng);
+
+  // After measurement, state must be pure basis state
+  for (size_t i = 0; i < psi.size(); ++i) {
+    if (i == result)
+      EXPECT_NEAR(psi[i].abs(), 1.0, EPS);
+    else
+      EXPECT_NEAR(psi[i].abs(), 0.0, EPS);
+  }
+}
+
+TEST(StatevectorTest, MeasureSuperpositionStatisticalCheck) {
+  RNG rng(123);
+
+  const int samples = 100000;
+  int count0 = 0;
+  int count1 = 0;
+
+  for (int i = 0; i < samples; ++i) {
+    Statevector psi(1);
+
+    double inv_sqrt2 = 1.0 / std::sqrt(2.0);
+    Matrix H(Complex(inv_sqrt2, 0), Complex(inv_sqrt2, 0),
+             Complex(inv_sqrt2, 0), Complex(-inv_sqrt2, 0));
+
+    psi.apply_gate(H, 0);
+
+    size_t result = psi.measure(rng);
+
+    if (result == 0)
+      ++count0;
+    else if (result == 1)
+      ++count1;
+  }
+
+  double freq0 = static_cast<double>(count0) / samples;
+  double freq1 = static_cast<double>(count1) / samples;
+
+  EXPECT_NEAR(freq0, 0.5, 0.01);
+  EXPECT_NEAR(freq1, 0.5, 0.01);
 }
