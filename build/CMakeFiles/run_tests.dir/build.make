@@ -86,10 +86,24 @@ CMakeFiles/run_tests.dir/datastructs/Complex.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/datastructs/Complex.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/squid2010/Projects/quell/datastructs/Complex.cpp -o CMakeFiles/run_tests.dir/datastructs/Complex.cpp.s
 
+CMakeFiles/run_tests.dir/datastructs/Circuit.cpp.o: CMakeFiles/run_tests.dir/flags.make
+CMakeFiles/run_tests.dir/datastructs/Circuit.cpp.o: /home/squid2010/Projects/quell/datastructs/Circuit.cpp
+CMakeFiles/run_tests.dir/datastructs/Circuit.cpp.o: CMakeFiles/run_tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/run_tests.dir/datastructs/Circuit.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/datastructs/Circuit.cpp.o -MF CMakeFiles/run_tests.dir/datastructs/Circuit.cpp.o.d -o CMakeFiles/run_tests.dir/datastructs/Circuit.cpp.o -c /home/squid2010/Projects/quell/datastructs/Circuit.cpp
+
+CMakeFiles/run_tests.dir/datastructs/Circuit.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/run_tests.dir/datastructs/Circuit.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/squid2010/Projects/quell/datastructs/Circuit.cpp > CMakeFiles/run_tests.dir/datastructs/Circuit.cpp.i
+
+CMakeFiles/run_tests.dir/datastructs/Circuit.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/datastructs/Circuit.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/squid2010/Projects/quell/datastructs/Circuit.cpp -o CMakeFiles/run_tests.dir/datastructs/Circuit.cpp.s
+
 CMakeFiles/run_tests.dir/datastructs/Matrix.cpp.o: CMakeFiles/run_tests.dir/flags.make
 CMakeFiles/run_tests.dir/datastructs/Matrix.cpp.o: /home/squid2010/Projects/quell/datastructs/Matrix.cpp
 CMakeFiles/run_tests.dir/datastructs/Matrix.cpp.o: CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/run_tests.dir/datastructs/Matrix.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/run_tests.dir/datastructs/Matrix.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/datastructs/Matrix.cpp.o -MF CMakeFiles/run_tests.dir/datastructs/Matrix.cpp.o.d -o CMakeFiles/run_tests.dir/datastructs/Matrix.cpp.o -c /home/squid2010/Projects/quell/datastructs/Matrix.cpp
 
 CMakeFiles/run_tests.dir/datastructs/Matrix.cpp.i: cmake_force
@@ -103,7 +117,7 @@ CMakeFiles/run_tests.dir/datastructs/Matrix.cpp.s: cmake_force
 CMakeFiles/run_tests.dir/datastructs/RNG.cpp.o: CMakeFiles/run_tests.dir/flags.make
 CMakeFiles/run_tests.dir/datastructs/RNG.cpp.o: /home/squid2010/Projects/quell/datastructs/RNG.cpp
 CMakeFiles/run_tests.dir/datastructs/RNG.cpp.o: CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/run_tests.dir/datastructs/RNG.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/run_tests.dir/datastructs/RNG.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/datastructs/RNG.cpp.o -MF CMakeFiles/run_tests.dir/datastructs/RNG.cpp.o.d -o CMakeFiles/run_tests.dir/datastructs/RNG.cpp.o -c /home/squid2010/Projects/quell/datastructs/RNG.cpp
 
 CMakeFiles/run_tests.dir/datastructs/RNG.cpp.i: cmake_force
@@ -117,7 +131,7 @@ CMakeFiles/run_tests.dir/datastructs/RNG.cpp.s: cmake_force
 CMakeFiles/run_tests.dir/datastructs/StateVector.cpp.o: CMakeFiles/run_tests.dir/flags.make
 CMakeFiles/run_tests.dir/datastructs/StateVector.cpp.o: /home/squid2010/Projects/quell/datastructs/StateVector.cpp
 CMakeFiles/run_tests.dir/datastructs/StateVector.cpp.o: CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/run_tests.dir/datastructs/StateVector.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/run_tests.dir/datastructs/StateVector.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/datastructs/StateVector.cpp.o -MF CMakeFiles/run_tests.dir/datastructs/StateVector.cpp.o.d -o CMakeFiles/run_tests.dir/datastructs/StateVector.cpp.o -c /home/squid2010/Projects/quell/datastructs/StateVector.cpp
 
 CMakeFiles/run_tests.dir/datastructs/StateVector.cpp.i: cmake_force
@@ -131,7 +145,7 @@ CMakeFiles/run_tests.dir/datastructs/StateVector.cpp.s: cmake_force
 CMakeFiles/run_tests.dir/datastructs/String.cpp.o: CMakeFiles/run_tests.dir/flags.make
 CMakeFiles/run_tests.dir/datastructs/String.cpp.o: /home/squid2010/Projects/quell/datastructs/String.cpp
 CMakeFiles/run_tests.dir/datastructs/String.cpp.o: CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/run_tests.dir/datastructs/String.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/run_tests.dir/datastructs/String.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/datastructs/String.cpp.o -MF CMakeFiles/run_tests.dir/datastructs/String.cpp.o.d -o CMakeFiles/run_tests.dir/datastructs/String.cpp.o -c /home/squid2010/Projects/quell/datastructs/String.cpp
 
 CMakeFiles/run_tests.dir/datastructs/String.cpp.i: cmake_force
@@ -145,7 +159,7 @@ CMakeFiles/run_tests.dir/datastructs/String.cpp.s: cmake_force
 CMakeFiles/run_tests.dir/tests/test_complex.cpp.o: CMakeFiles/run_tests.dir/flags.make
 CMakeFiles/run_tests.dir/tests/test_complex.cpp.o: /home/squid2010/Projects/quell/tests/test_complex.cpp
 CMakeFiles/run_tests.dir/tests/test_complex.cpp.o: CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/run_tests.dir/tests/test_complex.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/run_tests.dir/tests/test_complex.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/tests/test_complex.cpp.o -MF CMakeFiles/run_tests.dir/tests/test_complex.cpp.o.d -o CMakeFiles/run_tests.dir/tests/test_complex.cpp.o -c /home/squid2010/Projects/quell/tests/test_complex.cpp
 
 CMakeFiles/run_tests.dir/tests/test_complex.cpp.i: cmake_force
@@ -156,10 +170,24 @@ CMakeFiles/run_tests.dir/tests/test_complex.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/tests/test_complex.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/squid2010/Projects/quell/tests/test_complex.cpp -o CMakeFiles/run_tests.dir/tests/test_complex.cpp.s
 
+CMakeFiles/run_tests.dir/tests/test_circuit.cpp.o: CMakeFiles/run_tests.dir/flags.make
+CMakeFiles/run_tests.dir/tests/test_circuit.cpp.o: /home/squid2010/Projects/quell/tests/test_circuit.cpp
+CMakeFiles/run_tests.dir/tests/test_circuit.cpp.o: CMakeFiles/run_tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/run_tests.dir/tests/test_circuit.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/tests/test_circuit.cpp.o -MF CMakeFiles/run_tests.dir/tests/test_circuit.cpp.o.d -o CMakeFiles/run_tests.dir/tests/test_circuit.cpp.o -c /home/squid2010/Projects/quell/tests/test_circuit.cpp
+
+CMakeFiles/run_tests.dir/tests/test_circuit.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/run_tests.dir/tests/test_circuit.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/squid2010/Projects/quell/tests/test_circuit.cpp > CMakeFiles/run_tests.dir/tests/test_circuit.cpp.i
+
+CMakeFiles/run_tests.dir/tests/test_circuit.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/tests/test_circuit.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/squid2010/Projects/quell/tests/test_circuit.cpp -o CMakeFiles/run_tests.dir/tests/test_circuit.cpp.s
+
 CMakeFiles/run_tests.dir/tests/test_dynamic_array.cpp.o: CMakeFiles/run_tests.dir/flags.make
 CMakeFiles/run_tests.dir/tests/test_dynamic_array.cpp.o: /home/squid2010/Projects/quell/tests/test_dynamic_array.cpp
 CMakeFiles/run_tests.dir/tests/test_dynamic_array.cpp.o: CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/run_tests.dir/tests/test_dynamic_array.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/run_tests.dir/tests/test_dynamic_array.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/tests/test_dynamic_array.cpp.o -MF CMakeFiles/run_tests.dir/tests/test_dynamic_array.cpp.o.d -o CMakeFiles/run_tests.dir/tests/test_dynamic_array.cpp.o -c /home/squid2010/Projects/quell/tests/test_dynamic_array.cpp
 
 CMakeFiles/run_tests.dir/tests/test_dynamic_array.cpp.i: cmake_force
@@ -173,7 +201,7 @@ CMakeFiles/run_tests.dir/tests/test_dynamic_array.cpp.s: cmake_force
 CMakeFiles/run_tests.dir/tests/test_matrix.cpp.o: CMakeFiles/run_tests.dir/flags.make
 CMakeFiles/run_tests.dir/tests/test_matrix.cpp.o: /home/squid2010/Projects/quell/tests/test_matrix.cpp
 CMakeFiles/run_tests.dir/tests/test_matrix.cpp.o: CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/run_tests.dir/tests/test_matrix.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/run_tests.dir/tests/test_matrix.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/tests/test_matrix.cpp.o -MF CMakeFiles/run_tests.dir/tests/test_matrix.cpp.o.d -o CMakeFiles/run_tests.dir/tests/test_matrix.cpp.o -c /home/squid2010/Projects/quell/tests/test_matrix.cpp
 
 CMakeFiles/run_tests.dir/tests/test_matrix.cpp.i: cmake_force
@@ -187,7 +215,7 @@ CMakeFiles/run_tests.dir/tests/test_matrix.cpp.s: cmake_force
 CMakeFiles/run_tests.dir/tests/test_rng.cpp.o: CMakeFiles/run_tests.dir/flags.make
 CMakeFiles/run_tests.dir/tests/test_rng.cpp.o: /home/squid2010/Projects/quell/tests/test_rng.cpp
 CMakeFiles/run_tests.dir/tests/test_rng.cpp.o: CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/run_tests.dir/tests/test_rng.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/run_tests.dir/tests/test_rng.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/tests/test_rng.cpp.o -MF CMakeFiles/run_tests.dir/tests/test_rng.cpp.o.d -o CMakeFiles/run_tests.dir/tests/test_rng.cpp.o -c /home/squid2010/Projects/quell/tests/test_rng.cpp
 
 CMakeFiles/run_tests.dir/tests/test_rng.cpp.i: cmake_force
@@ -201,7 +229,7 @@ CMakeFiles/run_tests.dir/tests/test_rng.cpp.s: cmake_force
 CMakeFiles/run_tests.dir/tests/test_stack.cpp.o: CMakeFiles/run_tests.dir/flags.make
 CMakeFiles/run_tests.dir/tests/test_stack.cpp.o: /home/squid2010/Projects/quell/tests/test_stack.cpp
 CMakeFiles/run_tests.dir/tests/test_stack.cpp.o: CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/run_tests.dir/tests/test_stack.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/run_tests.dir/tests/test_stack.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/tests/test_stack.cpp.o -MF CMakeFiles/run_tests.dir/tests/test_stack.cpp.o.d -o CMakeFiles/run_tests.dir/tests/test_stack.cpp.o -c /home/squid2010/Projects/quell/tests/test_stack.cpp
 
 CMakeFiles/run_tests.dir/tests/test_stack.cpp.i: cmake_force
@@ -215,7 +243,7 @@ CMakeFiles/run_tests.dir/tests/test_stack.cpp.s: cmake_force
 CMakeFiles/run_tests.dir/tests/test_statevector.cpp.o: CMakeFiles/run_tests.dir/flags.make
 CMakeFiles/run_tests.dir/tests/test_statevector.cpp.o: /home/squid2010/Projects/quell/tests/test_statevector.cpp
 CMakeFiles/run_tests.dir/tests/test_statevector.cpp.o: CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/run_tests.dir/tests/test_statevector.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/run_tests.dir/tests/test_statevector.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/tests/test_statevector.cpp.o -MF CMakeFiles/run_tests.dir/tests/test_statevector.cpp.o.d -o CMakeFiles/run_tests.dir/tests/test_statevector.cpp.o -c /home/squid2010/Projects/quell/tests/test_statevector.cpp
 
 CMakeFiles/run_tests.dir/tests/test_statevector.cpp.i: cmake_force
@@ -229,7 +257,7 @@ CMakeFiles/run_tests.dir/tests/test_statevector.cpp.s: cmake_force
 CMakeFiles/run_tests.dir/tests/test_string.cpp.o: CMakeFiles/run_tests.dir/flags.make
 CMakeFiles/run_tests.dir/tests/test_string.cpp.o: /home/squid2010/Projects/quell/tests/test_string.cpp
 CMakeFiles/run_tests.dir/tests/test_string.cpp.o: CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/run_tests.dir/tests/test_string.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/run_tests.dir/tests/test_string.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/run_tests.dir/tests/test_string.cpp.o -MF CMakeFiles/run_tests.dir/tests/test_string.cpp.o.d -o CMakeFiles/run_tests.dir/tests/test_string.cpp.o -c /home/squid2010/Projects/quell/tests/test_string.cpp
 
 CMakeFiles/run_tests.dir/tests/test_string.cpp.i: cmake_force
@@ -243,11 +271,13 @@ CMakeFiles/run_tests.dir/tests/test_string.cpp.s: cmake_force
 # Object files for target run_tests
 run_tests_OBJECTS = \
 "CMakeFiles/run_tests.dir/datastructs/Complex.cpp.o" \
+"CMakeFiles/run_tests.dir/datastructs/Circuit.cpp.o" \
 "CMakeFiles/run_tests.dir/datastructs/Matrix.cpp.o" \
 "CMakeFiles/run_tests.dir/datastructs/RNG.cpp.o" \
 "CMakeFiles/run_tests.dir/datastructs/StateVector.cpp.o" \
 "CMakeFiles/run_tests.dir/datastructs/String.cpp.o" \
 "CMakeFiles/run_tests.dir/tests/test_complex.cpp.o" \
+"CMakeFiles/run_tests.dir/tests/test_circuit.cpp.o" \
 "CMakeFiles/run_tests.dir/tests/test_dynamic_array.cpp.o" \
 "CMakeFiles/run_tests.dir/tests/test_matrix.cpp.o" \
 "CMakeFiles/run_tests.dir/tests/test_rng.cpp.o" \
@@ -259,11 +289,13 @@ run_tests_OBJECTS = \
 run_tests_EXTERNAL_OBJECTS =
 
 run_tests: CMakeFiles/run_tests.dir/datastructs/Complex.cpp.o
+run_tests: CMakeFiles/run_tests.dir/datastructs/Circuit.cpp.o
 run_tests: CMakeFiles/run_tests.dir/datastructs/Matrix.cpp.o
 run_tests: CMakeFiles/run_tests.dir/datastructs/RNG.cpp.o
 run_tests: CMakeFiles/run_tests.dir/datastructs/StateVector.cpp.o
 run_tests: CMakeFiles/run_tests.dir/datastructs/String.cpp.o
 run_tests: CMakeFiles/run_tests.dir/tests/test_complex.cpp.o
+run_tests: CMakeFiles/run_tests.dir/tests/test_circuit.cpp.o
 run_tests: CMakeFiles/run_tests.dir/tests/test_dynamic_array.cpp.o
 run_tests: CMakeFiles/run_tests.dir/tests/test_matrix.cpp.o
 run_tests: CMakeFiles/run_tests.dir/tests/test_rng.cpp.o
@@ -275,7 +307,7 @@ run_tests: CMakeFiles/run_tests.dir/compiler_depend.ts
 run_tests: lib/libgtest_main.a
 run_tests: lib/libgtest.a
 run_tests: CMakeFiles/run_tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable run_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/squid2010/Projects/quell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable run_tests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/run_tests.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/cmake -D TEST_TARGET=run_tests -D TEST_EXECUTABLE=/home/squid2010/Projects/quell/build/run_tests -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/squid2010/Projects/quell/build -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=run_tests_TESTS -D CTEST_FILE=/home/squid2010/Projects/quell/build/run_tests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake/Modules/GoogleTestAddTests.cmake
 

@@ -236,6 +236,30 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+datastructs/Circuit.o: datastructs/Circuit.cpp.o
+.PHONY : datastructs/Circuit.o
+
+# target to build an object file
+datastructs/Circuit.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/Circuit.cpp.o
+.PHONY : datastructs/Circuit.cpp.o
+
+datastructs/Circuit.i: datastructs/Circuit.cpp.i
+.PHONY : datastructs/Circuit.i
+
+# target to preprocess a source file
+datastructs/Circuit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/Circuit.cpp.i
+.PHONY : datastructs/Circuit.cpp.i
+
+datastructs/Circuit.s: datastructs/Circuit.cpp.s
+.PHONY : datastructs/Circuit.s
+
+# target to generate assembly for a file
+datastructs/Circuit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/Circuit.cpp.s
+.PHONY : datastructs/Circuit.cpp.s
+
 datastructs/Complex.o: datastructs/Complex.cpp.o
 .PHONY : datastructs/Complex.o
 
@@ -355,6 +379,30 @@ datastructs/String.s: datastructs/String.cpp.s
 datastructs/String.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/String.cpp.s
 .PHONY : datastructs/String.cpp.s
+
+tests/test_circuit.o: tests/test_circuit.cpp.o
+.PHONY : tests/test_circuit.o
+
+# target to build an object file
+tests/test_circuit.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_circuit.cpp.o
+.PHONY : tests/test_circuit.cpp.o
+
+tests/test_circuit.i: tests/test_circuit.cpp.i
+.PHONY : tests/test_circuit.i
+
+# target to preprocess a source file
+tests/test_circuit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_circuit.cpp.i
+.PHONY : tests/test_circuit.cpp.i
+
+tests/test_circuit.s: tests/test_circuit.cpp.s
+.PHONY : tests/test_circuit.s
+
+# target to generate assembly for a file
+tests/test_circuit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_circuit.cpp.s
+.PHONY : tests/test_circuit.cpp.s
 
 tests/test_complex.o: tests/test_complex.cpp.o
 .PHONY : tests/test_complex.o
@@ -542,6 +590,9 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... run_tests"
+	@echo "... datastructs/Circuit.o"
+	@echo "... datastructs/Circuit.i"
+	@echo "... datastructs/Circuit.s"
 	@echo "... datastructs/Complex.o"
 	@echo "... datastructs/Complex.i"
 	@echo "... datastructs/Complex.s"
@@ -557,6 +608,9 @@ help:
 	@echo "... datastructs/String.o"
 	@echo "... datastructs/String.i"
 	@echo "... datastructs/String.s"
+	@echo "... tests/test_circuit.o"
+	@echo "... tests/test_circuit.i"
+	@echo "... tests/test_circuit.s"
 	@echo "... tests/test_complex.o"
 	@echo "... tests/test_complex.i"
 	@echo "... tests/test_complex.s"

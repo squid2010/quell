@@ -14,6 +14,7 @@ private:
     size_t target;
 
     GateOperation(const Matrix &g, size_t t) : gate(g), target(t) {}
+    GateOperation() : gate(Matrix::identity()), target(0) {}
   };
 
   size_t num_qubits;
