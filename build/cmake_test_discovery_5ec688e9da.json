@@ -59,52 +59,6 @@
       ]
     },
     {
-      "name": "CircuitTest",
-      "tests": 8,
-      "testsuite": [
-        {
-          "name": "DefaultConstructorCreatesZeroState",
-          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_circuit.cpp",
-          "line": 12
-        },
-        {
-          "name": "AddGateIncreasesGateCount",
-          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_circuit.cpp",
-          "line": 27
-        },
-        {
-          "name": "SinglePauliXExecution",
-          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_circuit.cpp",
-          "line": 37
-        },
-        {
-          "name": "SequentialGates",
-          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_circuit.cpp",
-          "line": 50
-        },
-        {
-          "name": "GateOnSpecificQubit",
-          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_circuit.cpp",
-          "line": 70
-        },
-        {
-          "name": "ExecuteAndMeasureDeterministic",
-          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_circuit.cpp",
-          "line": 88
-        },
-        {
-          "name": "ExecuteAndMeasureStatistical",
-          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_circuit.cpp",
-          "line": 102
-        },
-        {
-          "name": "InvalidQubitIndexThrows",
-          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_circuit.cpp",
-          "line": 133
-        }
-      ]
-    },
-    {
       "name": "DynamicArrayTest",
       "tests": 6,
       "testsuite": [
@@ -213,6 +167,52 @@
           "name": "Equality",
           "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_matrix.cpp",
           "line": 138
+        }
+      ]
+    },
+    {
+      "name": "RegisterTest",
+      "tests": 8,
+      "testsuite": [
+        {
+          "name": "DefaultConstructorCreatesZeroState",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_register.cpp",
+          "line": 12
+        },
+        {
+          "name": "AddGateIncreasesGateCount",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_register.cpp",
+          "line": 27
+        },
+        {
+          "name": "SinglePauliXExecution",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_register.cpp",
+          "line": 37
+        },
+        {
+          "name": "SequentialGates",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_register.cpp",
+          "line": 50
+        },
+        {
+          "name": "GateOnSpecificQubit",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_register.cpp",
+          "line": 70
+        },
+        {
+          "name": "ExecuteAndMeasureDeterministic",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_register.cpp",
+          "line": 88
+        },
+        {
+          "name": "ExecuteAndMeasureStatistical",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_register.cpp",
+          "line": 102
+        },
+        {
+          "name": "InvalidQubitIndexThrows",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_register.cpp",
+          "line": 133
         }
       ]
     },

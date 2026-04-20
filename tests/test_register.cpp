@@ -1,7 +1,7 @@
-#include "../datastructs/Circuit.hpp"
 #include "../datastructs/Complex.hpp"
 #include "../datastructs/Matrix.hpp"
 #include "../datastructs/RNG.hpp"
+#include "../datastructs/Register.hpp"
 #include "../datastructs/StateVector.hpp"
 
 #include <cmath>
@@ -9,8 +9,8 @@
 
 static const double EPS = 1e-9;
 
-TEST(CircuitTest, DefaultConstructorCreatesZeroState) {
-  Circuit circuit(3);
+TEST(RegisterTest, DefaultConstructorCreatesZeroState) {
+  Register circuit(3);
 
   EXPECT_EQ(circuit.qubits(), 3u);
   EXPECT_EQ(circuit.gate_count(), 0u);
@@ -24,8 +24,8 @@ TEST(CircuitTest, DefaultConstructorCreatesZeroState) {
     EXPECT_NEAR(result[i].get_real(), 0.0, EPS);
 }
 
-TEST(CircuitTest, AddGateIncreasesGateCount) {
-  Circuit circuit(1);
+TEST(RegisterTest, AddGateIncreasesGateCount) {
+  Register circuit(1);
 
   Matrix X(Complex(0, 0), Complex(1, 0), Complex(1, 0), Complex(0, 0));
 
@@ -34,8 +34,8 @@ TEST(CircuitTest, AddGateIncreasesGateCount) {
   EXPECT_EQ(circuit.gate_count(), 1u);
 }
 
-TEST(CircuitTest, SinglePauliXExecution) {
-  Circuit circuit(1);
+TEST(RegisterTest, SinglePauliXExecution) {
+  Register circuit(1);
 
   Matrix X(Complex(0, 0), Complex(1, 0), Complex(1, 0), Complex(0, 0));
 
@@ -47,8 +47,8 @@ TEST(CircuitTest, SinglePauliXExecution) {
   EXPECT_NEAR(result[1].get_real(), 1.0, EPS);
 }
 
-TEST(CircuitTest, SequentialGates) {
-  Circuit circuit(1);
+TEST(RegisterTest, SequentialGates) {
+  Register circuit(1);
 
   double inv_sqrt2 = 1.0 / std::sqrt(2.0);
 
@@ -67,8 +67,8 @@ TEST(CircuitTest, SequentialGates) {
   EXPECT_NEAR(result[1].get_real(), inv_sqrt2, EPS);
 }
 
-TEST(CircuitTest, GateOnSpecificQubit) {
-  Circuit circuit(2);
+TEST(RegisterTest, GateOnSpecificQubit) {
+  Register circuit(2);
 
   Matrix X(Complex(0, 0), Complex(1, 0), Complex(1, 0), Complex(0, 0));
 
@@ -85,10 +85,10 @@ TEST(CircuitTest, GateOnSpecificQubit) {
   }
 }
 
-TEST(CircuitTest, ExecuteAndMeasureDeterministic) {
+TEST(RegisterTest, ExecuteAndMeasureDeterministic) {
   RNG rng(42);
 
-  Circuit circuit(1);
+  Register circuit(1);
 
   Matrix X(Complex(0, 0), Complex(1, 0), Complex(1, 0), Complex(0, 0));
 
@@ -99,7 +99,7 @@ TEST(CircuitTest, ExecuteAndMeasureDeterministic) {
   EXPECT_EQ(result, 1u);
 }
 
-TEST(CircuitTest, ExecuteAndMeasureStatistical) {
+TEST(RegisterTest, ExecuteAndMeasureStatistical) {
   RNG rng(123);
 
   const int samples = 100000;
@@ -112,7 +112,7 @@ TEST(CircuitTest, ExecuteAndMeasureStatistical) {
            Complex(-inv_sqrt2, 0));
 
   for (int i = 0; i < samples; ++i) {
-    Circuit circuit(1);
+    Register circuit(1);
     circuit.add_gate(H, 0);
 
     size_t result = circuit.execute_and_measure(rng);
@@ -130,8 +130,8 @@ TEST(CircuitTest, ExecuteAndMeasureStatistical) {
   EXPECT_NEAR(freq1, 0.5, 0.01);
 }
 
-TEST(CircuitTest, InvalidQubitIndexThrows) {
-  Circuit circuit(1);
+TEST(RegisterTest, InvalidQubitIndexThrows) {
+  Register circuit(1);
 
   Matrix X(Complex(0, 0), Complex(1, 0), Complex(1, 0), Complex(0, 0));
 

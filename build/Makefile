@@ -236,30 +236,6 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-datastructs/Circuit.o: datastructs/Circuit.cpp.o
-.PHONY : datastructs/Circuit.o
-
-# target to build an object file
-datastructs/Circuit.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/Circuit.cpp.o
-.PHONY : datastructs/Circuit.cpp.o
-
-datastructs/Circuit.i: datastructs/Circuit.cpp.i
-.PHONY : datastructs/Circuit.i
-
-# target to preprocess a source file
-datastructs/Circuit.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/Circuit.cpp.i
-.PHONY : datastructs/Circuit.cpp.i
-
-datastructs/Circuit.s: datastructs/Circuit.cpp.s
-.PHONY : datastructs/Circuit.s
-
-# target to generate assembly for a file
-datastructs/Circuit.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/Circuit.cpp.s
-.PHONY : datastructs/Circuit.cpp.s
-
 datastructs/Complex.o: datastructs/Complex.cpp.o
 .PHONY : datastructs/Complex.o
 
@@ -332,6 +308,30 @@ datastructs/RNG.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/RNG.cpp.s
 .PHONY : datastructs/RNG.cpp.s
 
+datastructs/Register.o: datastructs/Register.cpp.o
+.PHONY : datastructs/Register.o
+
+# target to build an object file
+datastructs/Register.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/Register.cpp.o
+.PHONY : datastructs/Register.cpp.o
+
+datastructs/Register.i: datastructs/Register.cpp.i
+.PHONY : datastructs/Register.i
+
+# target to preprocess a source file
+datastructs/Register.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/Register.cpp.i
+.PHONY : datastructs/Register.cpp.i
+
+datastructs/Register.s: datastructs/Register.cpp.s
+.PHONY : datastructs/Register.s
+
+# target to generate assembly for a file
+datastructs/Register.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/Register.cpp.s
+.PHONY : datastructs/Register.cpp.s
+
 datastructs/StateVector.o: datastructs/StateVector.cpp.o
 .PHONY : datastructs/StateVector.o
 
@@ -379,30 +379,6 @@ datastructs/String.s: datastructs/String.cpp.s
 datastructs/String.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/String.cpp.s
 .PHONY : datastructs/String.cpp.s
-
-tests/test_circuit.o: tests/test_circuit.cpp.o
-.PHONY : tests/test_circuit.o
-
-# target to build an object file
-tests/test_circuit.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_circuit.cpp.o
-.PHONY : tests/test_circuit.cpp.o
-
-tests/test_circuit.i: tests/test_circuit.cpp.i
-.PHONY : tests/test_circuit.i
-
-# target to preprocess a source file
-tests/test_circuit.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_circuit.cpp.i
-.PHONY : tests/test_circuit.cpp.i
-
-tests/test_circuit.s: tests/test_circuit.cpp.s
-.PHONY : tests/test_circuit.s
-
-# target to generate assembly for a file
-tests/test_circuit.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_circuit.cpp.s
-.PHONY : tests/test_circuit.cpp.s
 
 tests/test_complex.o: tests/test_complex.cpp.o
 .PHONY : tests/test_complex.o
@@ -475,6 +451,30 @@ tests/test_matrix.s: tests/test_matrix.cpp.s
 tests/test_matrix.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_matrix.cpp.s
 .PHONY : tests/test_matrix.cpp.s
+
+tests/test_register.o: tests/test_register.cpp.o
+.PHONY : tests/test_register.o
+
+# target to build an object file
+tests/test_register.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_register.cpp.o
+.PHONY : tests/test_register.cpp.o
+
+tests/test_register.i: tests/test_register.cpp.i
+.PHONY : tests/test_register.i
+
+# target to preprocess a source file
+tests/test_register.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_register.cpp.i
+.PHONY : tests/test_register.cpp.i
+
+tests/test_register.s: tests/test_register.cpp.s
+.PHONY : tests/test_register.s
+
+# target to generate assembly for a file
+tests/test_register.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/tests/test_register.cpp.s
+.PHONY : tests/test_register.cpp.s
 
 tests/test_rng.o: tests/test_rng.cpp.o
 .PHONY : tests/test_rng.o
@@ -590,9 +590,6 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... run_tests"
-	@echo "... datastructs/Circuit.o"
-	@echo "... datastructs/Circuit.i"
-	@echo "... datastructs/Circuit.s"
 	@echo "... datastructs/Complex.o"
 	@echo "... datastructs/Complex.i"
 	@echo "... datastructs/Complex.s"
@@ -602,15 +599,15 @@ help:
 	@echo "... datastructs/RNG.o"
 	@echo "... datastructs/RNG.i"
 	@echo "... datastructs/RNG.s"
+	@echo "... datastructs/Register.o"
+	@echo "... datastructs/Register.i"
+	@echo "... datastructs/Register.s"
 	@echo "... datastructs/StateVector.o"
 	@echo "... datastructs/StateVector.i"
 	@echo "... datastructs/StateVector.s"
 	@echo "... datastructs/String.o"
 	@echo "... datastructs/String.i"
 	@echo "... datastructs/String.s"
-	@echo "... tests/test_circuit.o"
-	@echo "... tests/test_circuit.i"
-	@echo "... tests/test_circuit.s"
 	@echo "... tests/test_complex.o"
 	@echo "... tests/test_complex.i"
 	@echo "... tests/test_complex.s"
@@ -620,6 +617,9 @@ help:
 	@echo "... tests/test_matrix.o"
 	@echo "... tests/test_matrix.i"
 	@echo "... tests/test_matrix.s"
+	@echo "... tests/test_register.o"
+	@echo "... tests/test_register.i"
+	@echo "... tests/test_register.s"
 	@echo "... tests/test_rng.o"
 	@echo "... tests/test_rng.i"
 	@echo "... tests/test_rng.s"

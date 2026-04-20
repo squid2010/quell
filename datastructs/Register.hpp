@@ -1,5 +1,5 @@
-#ifndef CIRCUIT_HPP
-#define CIRCUIT_HPP
+#ifndef REGISTER_HPP
+#define REGISTER_HPP
 
 #include "DynamicArray.hpp"
 #include "Matrix.hpp"
@@ -7,7 +7,7 @@
 #include "StateVector.hpp"
 #include <cstddef>
 
-class Circuit {
+class Register {
 private:
   struct GateOperation { // substitute for later instruction
     Matrix gate;
@@ -23,11 +23,11 @@ private:
 
 public:
   // Constructors
-  explicit Circuit(size_t n_qubits);
-  Circuit(const Statevector &initial);
+  explicit Register(size_t n_qubits);
+  Register(const Statevector &initial);
 
   void add_gate(const Matrix &gate, size_t target); // add gate
-  Statevector execute() const;                      // run the Circuit
+  Statevector execute() const;                      // run the Register
   size_t
   execute_and_measure(RNG &rng) const; // run the circuit, then measure it
 
