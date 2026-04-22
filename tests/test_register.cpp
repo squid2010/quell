@@ -1,7 +1,7 @@
+#include "../backend/Register.hpp"
 #include "../datastructs/Complex.hpp"
 #include "../datastructs/Matrix.hpp"
 #include "../datastructs/RNG.hpp"
-#include "../datastructs/Register.hpp"
 #include "../datastructs/StateVector.hpp"
 
 #include <cmath>

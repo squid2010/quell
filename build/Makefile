@@ -236,6 +236,30 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+backend/Register.o: backend/Register.cpp.o
+.PHONY : backend/Register.o
+
+# target to build an object file
+backend/Register.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/backend/Register.cpp.o
+.PHONY : backend/Register.cpp.o
+
+backend/Register.i: backend/Register.cpp.i
+.PHONY : backend/Register.i
+
+# target to preprocess a source file
+backend/Register.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/backend/Register.cpp.i
+.PHONY : backend/Register.cpp.i
+
+backend/Register.s: backend/Register.cpp.s
+.PHONY : backend/Register.s
+
+# target to generate assembly for a file
+backend/Register.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/backend/Register.cpp.s
+.PHONY : backend/Register.cpp.s
+
 datastructs/Complex.o: datastructs/Complex.cpp.o
 .PHONY : datastructs/Complex.o
 
@@ -307,30 +331,6 @@ datastructs/RNG.s: datastructs/RNG.cpp.s
 datastructs/RNG.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/RNG.cpp.s
 .PHONY : datastructs/RNG.cpp.s
-
-datastructs/Register.o: datastructs/Register.cpp.o
-.PHONY : datastructs/Register.o
-
-# target to build an object file
-datastructs/Register.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/Register.cpp.o
-.PHONY : datastructs/Register.cpp.o
-
-datastructs/Register.i: datastructs/Register.cpp.i
-.PHONY : datastructs/Register.i
-
-# target to preprocess a source file
-datastructs/Register.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/Register.cpp.i
-.PHONY : datastructs/Register.cpp.i
-
-datastructs/Register.s: datastructs/Register.cpp.s
-.PHONY : datastructs/Register.s
-
-# target to generate assembly for a file
-datastructs/Register.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/datastructs/Register.cpp.s
-.PHONY : datastructs/Register.cpp.s
 
 datastructs/StateVector.o: datastructs/StateVector.cpp.o
 .PHONY : datastructs/StateVector.o
@@ -590,6 +590,9 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... run_tests"
+	@echo "... backend/Register.o"
+	@echo "... backend/Register.i"
+	@echo "... backend/Register.s"
 	@echo "... datastructs/Complex.o"
 	@echo "... datastructs/Complex.i"
 	@echo "... datastructs/Complex.s"
@@ -599,9 +602,6 @@ help:
 	@echo "... datastructs/RNG.o"
 	@echo "... datastructs/RNG.i"
 	@echo "... datastructs/RNG.s"
-	@echo "... datastructs/Register.o"
-	@echo "... datastructs/Register.i"
-	@echo "... datastructs/Register.s"
 	@echo "... datastructs/StateVector.o"
 	@echo "... datastructs/StateVector.i"
 	@echo "... datastructs/StateVector.s"

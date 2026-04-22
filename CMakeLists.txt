@@ -21,7 +21,7 @@ enable_testing()
 set(DATASOURCE_FILES # add cpp, .tpp don't need cause in headers
     datastructs/Complex.cpp
     datastructs/Matrix.cpp
-    datastructs/Register.cpp
+    backend/Register.cpp
     datastructs/RNG.cpp
     datastructs/StateVector.cpp
     datastructs/String.cpp
