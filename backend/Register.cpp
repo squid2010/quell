@@ -13,11 +13,18 @@ void Register::add_gate(const Matrix &gate, size_t target) {
   operations.push_back(GateOperation(gate, target));
 }
 
+void Register::add_gate(const Matrix &gate, size_t target, size_t control) {
+  if (target >= num_qubits || control >= num_qubits)
+    throw std::runtime_error("Invalid qubit index in Register::add_gate");
+  operations.push_back(GateOperation(gate, target, control));
+}
+
 Statevector Register::execute() const {
   Statevector state = initial_state;
 
   for (size_t i = 0; i < operations.get_size(); ++i) {
-    state.apply_gate(operations[i].gate, operations[i].target);
+    state.apply_gate(operations[i].gate, operations[i].target,
+                     operations[i].control);
   }
 
   return state;

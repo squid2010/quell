@@ -1,0 +1,110 @@
+[
+{
+  "directory": "/home/squid2010/Projects/quell/build",
+  "command": "/usr/bin/c++  -I/home/squid2010/Projects/quell/datastructs -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest/include -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/run_tests.dir/datastructs/Complex.cpp.o -c /home/squid2010/Projects/quell/datastructs/Complex.cpp",
+  "file": "/home/squid2010/Projects/quell/datastructs/Complex.cpp",
+  "output": "CMakeFiles/run_tests.dir/datastructs/Complex.cpp.o"
+},
+{
+  "directory": "/home/squid2010/Projects/quell/build",
+  "command": "/usr/bin/c++  -I/home/squid2010/Projects/quell/datastructs -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest/include -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/run_tests.dir/datastructs/Matrix.cpp.o -c /home/squid2010/Projects/quell/datastructs/Matrix.cpp",
+  "file": "/home/squid2010/Projects/quell/datastructs/Matrix.cpp",
+  "output": "CMakeFiles/run_tests.dir/datastructs/Matrix.cpp.o"
+},
+{
+  "directory": "/home/squid2010/Projects/quell/build",
+  "command": "/usr/bin/c++  -I/home/squid2010/Projects/quell/datastructs -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest/include -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/run_tests.dir/backend/Register.cpp.o -c /home/squid2010/Projects/quell/backend/Register.cpp",
+  "file": "/home/squid2010/Projects/quell/backend/Register.cpp",
+  "output": "CMakeFiles/run_tests.dir/backend/Register.cpp.o"
+},
+{
+  "directory": "/home/squid2010/Projects/quell/build",
+  "command": "/usr/bin/c++  -I/home/squid2010/Projects/quell/datastructs -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest/include -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/run_tests.dir/datastructs/RNG.cpp.o -c /home/squid2010/Projects/quell/datastructs/RNG.cpp",
+  "file": "/home/squid2010/Projects/quell/datastructs/RNG.cpp",
+  "output": "CMakeFiles/run_tests.dir/datastructs/RNG.cpp.o"
+},
+{
+  "directory": "/home/squid2010/Projects/quell/build",
+  "command": "/usr/bin/c++  -I/home/squid2010/Projects/quell/datastructs -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest/include -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/run_tests.dir/datastructs/StateVector.cpp.o -c /home/squid2010/Projects/quell/datastructs/StateVector.cpp",
+  "file": "/home/squid2010/Projects/quell/datastructs/StateVector.cpp",
+  "output": "CMakeFiles/run_tests.dir/datastructs/StateVector.cpp.o"
+},
+{
+  "directory": "/home/squid2010/Projects/quell/build",
+  "command": "/usr/bin/c++  -I/home/squid2010/Projects/quell/datastructs -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest/include -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/run_tests.dir/datastructs/String.cpp.o -c /home/squid2010/Projects/quell/datastructs/String.cpp",
+  "file": "/home/squid2010/Projects/quell/datastructs/String.cpp",
+  "output": "CMakeFiles/run_tests.dir/datastructs/String.cpp.o"
+},
+{
+  "directory": "/home/squid2010/Projects/quell/build",
+  "command": "/usr/bin/c++  -I/home/squid2010/Projects/quell/datastructs -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest/include -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/run_tests.dir/tests/test_complex.cpp.o -c /home/squid2010/Projects/quell/tests/test_complex.cpp",
+  "file": "/home/squid2010/Projects/quell/tests/test_complex.cpp",
+  "output": "CMakeFiles/run_tests.dir/tests/test_complex.cpp.o"
+},
+{
+  "directory": "/home/squid2010/Projects/quell/build",
+  "command": "/usr/bin/c++  -I/home/squid2010/Projects/quell/datastructs -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest/include -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/run_tests.dir/tests/test_dynamic_array.cpp.o -c /home/squid2010/Projects/quell/tests/test_dynamic_array.cpp",
+  "file": "/home/squid2010/Projects/quell/tests/test_dynamic_array.cpp",
+  "output": "CMakeFiles/run_tests.dir/tests/test_dynamic_array.cpp.o"
+},
+{
+  "directory": "/home/squid2010/Projects/quell/build",
+  "command": "/usr/bin/c++  -I/home/squid2010/Projects/quell/datastructs -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest/include -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/run_tests.dir/tests/test_matrix.cpp.o -c /home/squid2010/Projects/quell/tests/test_matrix.cpp",
+  "file": "/home/squid2010/Projects/quell/tests/test_matrix.cpp",
+  "output": "CMakeFiles/run_tests.dir/tests/test_matrix.cpp.o"
+},
+{
+  "directory": "/home/squid2010/Projects/quell/build",
+  "command": "/usr/bin/c++  -I/home/squid2010/Projects/quell/datastructs -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest/include -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/run_tests.dir/tests/test_register.cpp.o -c /home/squid2010/Projects/quell/tests/test_register.cpp",
+  "file": "/home/squid2010/Projects/quell/tests/test_register.cpp",
+  "output": "CMakeFiles/run_tests.dir/tests/test_register.cpp.o"
+},
+{
+  "directory": "/home/squid2010/Projects/quell/build",
+  "command": "/usr/bin/c++  -I/home/squid2010/Projects/quell/datastructs -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest/include -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/run_tests.dir/tests/test_rng.cpp.o -c /home/squid2010/Projects/quell/tests/test_rng.cpp",
+  "file": "/home/squid2010/Projects/quell/tests/test_rng.cpp",
+  "output": "CMakeFiles/run_tests.dir/tests/test_rng.cpp.o"
+},
+{
+  "directory": "/home/squid2010/Projects/quell/build",
+  "command": "/usr/bin/c++  -I/home/squid2010/Projects/quell/datastructs -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest/include -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/run_tests.dir/tests/test_stack.cpp.o -c /home/squid2010/Projects/quell/tests/test_stack.cpp",
+  "file": "/home/squid2010/Projects/quell/tests/test_stack.cpp",
+  "output": "CMakeFiles/run_tests.dir/tests/test_stack.cpp.o"
+},
+{
+  "directory": "/home/squid2010/Projects/quell/build",
+  "command": "/usr/bin/c++  -I/home/squid2010/Projects/quell/datastructs -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest/include -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/run_tests.dir/tests/test_statevector.cpp.o -c /home/squid2010/Projects/quell/tests/test_statevector.cpp",
+  "file": "/home/squid2010/Projects/quell/tests/test_statevector.cpp",
+  "output": "CMakeFiles/run_tests.dir/tests/test_statevector.cpp.o"
+},
+{
+  "directory": "/home/squid2010/Projects/quell/build",
+  "command": "/usr/bin/c++  -I/home/squid2010/Projects/quell/datastructs -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest/include -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest -std=c++17 -o CMakeFiles/run_tests.dir/tests/test_string.cpp.o -c /home/squid2010/Projects/quell/tests/test_string.cpp",
+  "file": "/home/squid2010/Projects/quell/tests/test_string.cpp",
+  "output": "CMakeFiles/run_tests.dir/tests/test_string.cpp.o"
+},
+{
+  "directory": "/home/squid2010/Projects/quell/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/c++  -I/home/squid2010/Projects/quell/datastructs -I/home/squid2010/Projects/quell/build/_deps/googletest-src/googlemock/include -I/home/squid2010/Projects/quell/build/_deps/googletest-src/googlemock -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest/include -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/squid2010/Projects/quell/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/home/squid2010/Projects/quell/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+},
+{
+  "directory": "/home/squid2010/Projects/quell/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/c++  -I/home/squid2010/Projects/quell/datastructs -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googlemock/include -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googlemock -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest/include -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/squid2010/Projects/quell/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/home/squid2010/Projects/quell/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
+},
+{
+  "directory": "/home/squid2010/Projects/quell/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/c++  -I/home/squid2010/Projects/quell/datastructs -I/home/squid2010/Projects/quell/build/_deps/googletest-src/googletest/include -I/home/squid2010/Projects/quell/build/_deps/googletest-src/googletest -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/home/squid2010/Projects/quell/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+},
+{
+  "directory": "/home/squid2010/Projects/quell/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/c++  -I/home/squid2010/Projects/quell/datastructs -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest/include -isystem /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/squid2010/Projects/quell/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/home/squid2010/Projects/quell/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+}
+]

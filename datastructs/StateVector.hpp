@@ -5,6 +5,7 @@
 #include "DynamicArray.hpp"
 #include "Matrix.hpp"
 #include "RNG.hpp"
+#include <optional>
 
 class Statevector {
 private:
@@ -29,7 +30,8 @@ public:
   void normalize();
   size_t measure(RNG &rng); // returns measurement as integer
   Complex inner_product(const Statevector &other) const;
-  void apply_gate(const Matrix &gate, size_t target);
+  void apply_gate(const Matrix &gate, size_t target,
+                  std::optional<size_t> control = std::nullopt);
 };
 
 #endif

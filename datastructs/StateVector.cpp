@@ -63,7 +63,6 @@ size_t Statevector::measure(RNG &rng) {
 
   // Build probability distribution
   DynamicArray<double> probs;
-  probs.resize(dim);
   double sum = 0.0;
 
   for (size_t i = 0; i < dim; ++i) {
@@ -115,17 +114,25 @@ Statevector::inner_product(const Statevector &other) const { // inner product
 }
 
 void Statevector::apply_gate(
-    const Matrix &gate,
-    size_t target) { // apply 2x2 gate pairwise (O(2^n))
+    const Matrix &gate, size_t target,
+    std::optional<size_t> control) { // apply 2x2 gate pairwise (O(2^n))
   if (target >= num_qubits)
     throw std::runtime_error("Invalid qubit index");
 
+  if (control && *control >= num_qubits) // invalid control
+    throw std::runtime_error("Invalid control qubit");
+
   size_t dim = dimension();
-  size_t mask = 1ULL << target; // index of target
+  size_t target_mask = 1ULL << target;                    // index of target
+  size_t control_mask = control ? (1ULL << *control) : 0; // control mask
 
   for (size_t i = 0; i < dim; i++) {
-    if ((i & mask) == 0) { // Process only where target is 0
-      size_t j = i | mask; // flip target bit
+    if ((i & target_mask) == 0) { // Process only where target is 0
+      if (control &&
+          ((i & control_mask) == 0)) // if controlled, ensure control qubit=1
+        continue;
+
+      size_t j = i | target_mask; // flip target bit
 
       Complex a0 = data[i]; // First amplitude
       Complex a1 = data[j]; // Second amplitude

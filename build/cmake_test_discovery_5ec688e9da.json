@@ -1,5 +1,5 @@
 {
-  "tests": 70,
+  "tests": 71,
   "name": "AllTests",
   "testsuites": [
     {
@@ -300,7 +300,7 @@
     },
     {
       "name": "StatevectorTest",
-      "tests": 13,
+      "tests": 14,
       "testsuite": [
         {
           "name": "DefaultConstructorCreatesZeroState",
@@ -343,29 +343,34 @@
           "line": 98
         },
         {
-          "name": "InnerProductDimensionMismatchThrows",
+          "name": "ApplyCNOT",
           "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_statevector.cpp",
           "line": 115
         },
         {
+          "name": "InnerProductDimensionMismatchThrows",
+          "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_statevector.cpp",
+          "line": 140
+        },
+        {
           "name": "InvalidQubitIndexThrows",
           "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_statevector.cpp",
-          "line": 122
+          "line": 147
         },
         {
           "name": "MeasureBasisStateDeterministic",
           "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_statevector.cpp",
-          "line": 130
+          "line": 155
         },
         {
           "name": "MeasureCollapsesState",
           "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_statevector.cpp",
-          "line": 145
+          "line": 170
         },
         {
           "name": "MeasureSuperpositionStatisticalCheck",
           "file": "\/home\/squid2010\/Projects\/quell\/tests\/test_statevector.cpp",
-          "line": 167
+          "line": 192
         }
       ]
     },

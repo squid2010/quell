@@ -112,6 +112,31 @@ TEST(StatevectorTest, ApplyGateOnSpecificQubit) {
   }
 }
 
+TEST(StatevectorTest, ApplyCNOT) {
+  Statevector psi(2);
+  Matrix X(Complex(0, 0), Complex(1, 0), Complex(1, 0), Complex(0, 0));
+
+  // Apply CX to qubit 0 (first qubit)
+  psi.apply_gate(X, 0, 1);
+
+  // Expect |00>
+  EXPECT_NEAR(psi[0].get_real(), 1.0, EPS);
+  for (size_t i = 1; i < psi.size(); ++i) {
+    EXPECT_NEAR(psi[i].get_real(), 0.0, EPS);
+  }
+
+  psi.apply_gate(X, 0);    // Apply X to qubit 0
+  psi.apply_gate(X, 1, 0); // Apply CX to qubit 1 with 0 as control
+  // Expect |10>
+
+  EXPECT_NEAR(psi[3].get_real(), 1.0, EPS);
+
+  for (size_t i = 0; i < psi.size(); ++i) {
+    if (i != 3)
+      EXPECT_NEAR(psi[i].get_real(), 0.0, EPS);
+  }
+}
+
 TEST(StatevectorTest, InnerProductDimensionMismatchThrows) {
   Statevector psi1(1);
   Statevector psi2(2);
