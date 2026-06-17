@@ -1,4 +1,4 @@
-## Quell
+# Quell
 A functional programming language that integrates classical computation with a quantum execution backend.
 
 ---
@@ -48,7 +48,7 @@ Intermediate representation (`.q`)
         ↓
 Quell VM (classical + quantum backend)
 
-# Quantum execution model
+### Quantum execution model
 Quell uses a **register-based quantum system**:
 - Qubits exist inside registers
 - A register may contain one or more qubits
@@ -56,7 +56,7 @@ Quell uses a **register-based quantum system**:
     - a reference to a register element
     - or an independently allocated single-qubit register
 
-# Backend instruction set
+### Backend instruction set
 The Quell VM executes a low-level instruction set supporting both classical and quantum operations.
 
 Quantum instructions:
