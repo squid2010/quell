@@ -5,18 +5,21 @@
 #include <optional>
 
 enum class GateID { // default supported set of gates
-    I, H, X, Y, Z, S, T, S_DAG, T_DAG, // one qubit gates
+    I, 
+    H, X, Y, Z, 
+    S, T, SDG, TDG, // one qubit gates
     RX, RY, RZ, PHASE, // parameterized gates
-    CNOT, CX // two qubit controlled gates (no other 2 qubit gates)
+    CX, // two qubit controlled gates (CX and SWAP will get lowered)
 };
 
 enum class OpCode { // op codes (duh)
-    Gate, Measure, Init, End // basic quantum ops
+    Gate, Measure, Reset, Init, // basic quantum ops
     MovImm, Mov, Add, Sub, Mul, Div, // basic classical vm opps
     CmpEq, CmpNe, CmpLt, CmpLe, CmpGt, CmpGe, // classical comparisons - 0 or 1
     Jmp, JmpIfZero, JmpIfNonZero, // control flow, relative to pc
     Push, Pop, ArgLoad, Call, Ret, // call stack stuff - recursion
     GateR1, GateR2, InitR, MeasureR, // dynamic qubit/bit addressing
+    End // end of code
 };
 
 struct Instruction { // machine code instructions
