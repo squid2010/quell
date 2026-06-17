@@ -1,0 +1,198 @@
+program         = { function } EOF ;
+    # A program consists of zero or more function definitions
+
+
+function        = "func" identifier [ generic_params ]
+                  "(" [ params ] ")" "->" type
+                  block ;
+    # A function runs code to evaluate an output of some type, or void if none is returned
+
+
+generic_params  = "<" identifier { "," identifier } [ "," ] ">" ;
+    # generic type system allowed, similar to java's
+
+
+params          = param { "," param } [ "," ] ;
+param           = identifier ":" type ;
+
+
+block           = "{" { statement } [ expression ] "}" ;
+    # Expression-block: optionally ends with a value expression (no trailing ';' on that final expression)
+
+
+statement       = let_stmt
+                | return_stmt
+                | if_stmt
+                | gate_stmt
+                | expr_stmt
+                | ";" ;
+    # Allow empty statement as a standalone ';'
+
+
+let_stmt        = "let" pattern ":" type [ "=" expression ] ";" ;
+
+
+pattern         = identifier
+                | tuple_pattern ;
+
+
+tuple_pattern   = "(" [ identifier { "," identifier } [ "," ] ] ")" ;
+    # Allows:
+    #   ()          -- unit pattern
+    #   (x)         -- 1-tuple pattern (NOTE: syntactically same as parenthesized identifier, but not recommended for people to use bc clarity)
+    #   (x,)        -- 1-tuple pattern (recommended canonical spelling)
+    #   (x,y,)      -- trailing comma
+
+
+return_stmt     = "return" [ expression ] ";" ;
+
+
+if_stmt         = "if" "(" expression ")" block [ "else" block ] ;
+    # Statement form; block can yield a value but that value is ignored unless returned/used explicitly
+
+
+gate_stmt       = gate_name 
+                [ "(" expression { "," expression } ")" ] # parameterized
+                gate_operands 
+                ";" ;
+    # Dedicated quantum gate statements
+
+
+gate_name       = "I" | "H" | "X" | "Y" | "Z" 
+                | "S" | "SDG" | "T" | "TDG"
+                | "RX" | "RY" | "RZ" | "PHASE"
+                | "CX" | "CZ" | "SWAP"
+                | "MEASURE"
+                | "RESET" ;
+    # gates acting on a qubit - base set that people will use, some will get lowered in the future
+
+gate_operands   = gate_operand { gate_operand } ;
+    # Space-separated operands
+    # Example: CX q0 q1;
+    # Example: MEASURE q0 c0;
+
+
+gate_operand    = postfix ;
+    # Allow either symbolic names (q0) or indexed registers (qreg[0])
+
+
+expr_stmt       = expression ";" ;
+
+
+expression      = if_expr
+                | lambda
+                | composition ;
+    # lambda calculus allowed - very very end bc its a bit annoying and not as needed
+
+
+if_expr         = "if" "(" expression ")" expr_block "else" expr_block ;
+    # Expression-based conditional
+
+
+expr_block      = "{" { statement } [ expression ] "}" ;
+    # Same shape as block, but used in expression position.
+
+
+lambda          = "func" "(" [ params ] ")" "->" type
+                  expr_block ;
+    # Anonymous function, uses expr_block to allow returning a value expression
+    # Again, do at very end bc annoying
+
+
+composition     = equality { "." equality } ;
+    # Function composition operator, left-associative
+    # Semantics will be "f . g" = (x -> f(g(x))) like Haskell
+
+
+equality        = comparison { ( "==" | "!=" ) comparison } ;
+
+
+comparison      = additive { ( "<" | ">" | "<=" | ">=" ) additive } ;
+
+
+additive        = multiplicative { ( "+" | "-" ) multiplicative } ;
+
+
+multiplicative  = application { ( "*" | "/" ) application } ;
+
+
+application     = postfix { postfix } ;
+    # Juxtaposition application:
+    # f(x) is a call expression; but also allow:
+    #   f x
+    #   f x y
+    # because then a) gates feel lower level bc they are, and b) i think it looks cool, and c) parenthesese are unneeded, even if f x y can be unclear :D
+
+
+postfix         = primary { call_suffix | index_suffix } ;
+
+
+call_suffix     = "(" [ args ] ")" ;
+    # Allows calling any expression, not just identifiers
+    # (f)(x), (func(...) -> ... {...})(y), etc
+
+
+index_suffix    = "[" expression "]" ;
+
+
+args            = expression { "," expression } [ "," ] ;
+
+
+primary         = literal
+                | identifier
+                | tuple
+                | "(" expression ")"
+                | expr_block ;
+    # expr_block as a primary enables block-expressions in general, e.g:
+    # let x: int = { let y:int = 2; y + 1 };
+
+
+tuple           = "(" [ expression { "," expression } [ "," ] ] ")" ;
+    # Allows:
+    #   ()        unit value
+    #   (x)       parenthesized expression (NOT a tuple)
+    #   (x,)      1-tuple
+    #   (x,y,)    trailing comma
+
+
+type            = "void"
+                | "qubit"
+                | "bit"
+                | "int"
+                | "float"
+                | "bool"
+                | "qreg" "<" number_or_ident ">"
+                | "breg" "<" number_or_ident ">"
+                | "(" type { "," type } [ "," ] ")" ;
+    # Type tuples allow 1-tuples too, (int,)
+
+
+number_or_ident = number | identifier ;
+
+
+literal         = number
+                | string
+                | "true"
+                | "false" ;
+
+
+number          = digit { digit }
+                  [ "." digit { digit } ] ;
+
+
+string          = '"' { character } '"' ;
+
+
+comment         = "#" { not_newline_character } ;
+    # Single-line comment; lexer discards it
+
+
+identifier      = ( letter | "_" ) { letter | digit | "_" } ;
+
+
+letter          = "A".."Z" | "a".."z" ;
+digit           = "0".."9" ;
+
+
+character       = ? any character except '"' ? ;
+not_newline_character = ? any character except newline ? ;
