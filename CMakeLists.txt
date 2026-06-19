@@ -19,3 +19,21 @@ enable_testing()
 
 include(GoogleTest) # discover TEST() cases automatically
 
+add_library(quell_vm INTERFACE)
+
+target_include_directories(quell_vm
+    INTERFACE
+        ${PROJECT_SOURCE_DIR}
+)
+
+add_executable(test_instruction
+    tests/backend/vm/test_instruction.cpp
+)
+
+target_link_libraries(test_instruction
+    PRIVATE
+        quell_vm
+        GTest::gtest_main
+)
+
+gtest_discover_tests(test_instruction)
