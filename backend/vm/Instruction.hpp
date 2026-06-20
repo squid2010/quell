@@ -5,35 +5,69 @@
 #include <optional>
 
 enum class GateID { // default supported set of gates
-    I, 
-    H, X, Y, Z, 
-    S, T, SDG, TDG, // one qubit gates
-    RX, RY, RZ, PHASE, // parameterized gates
-    CX, // two qubit controlled gates (CX and SWAP will get lowered)
+  I,
+  H,
+  X,
+  Y,
+  Z,
+  S,
+  T,
+  SDG,
+  TDG, // one qubit gates
+  RX,
+  RY,
+  RZ,
+  PHASE, // parameterized gates
+  CX,    // two qubit controlled gates (CX and SWAP will get lowered)
 };
 
 enum class OpCode { // op codes (duh)
-    Gate, Measure, Reset, Init, // basic quantum ops
-    MovImm, Mov, Add, Sub, Mul, Div, // basic classical vm opps
-    CmpEq, CmpNe, CmpLt, CmpLe, CmpGt, CmpGe, // classical comparisons - 0 or 1
-    Jmp, JmpIfZero, JmpIfNonZero, // control flow, relative to pc
-    Push, Pop, ArgLoad, Call, Ret, // call stack stuff - recursion
-    GateR1, GateR2, InitR, MeasureR, // dynamic qubit/bit addressing
-    End // end of code
+  Gate,
+  Measure,
+  Reset,
+  Init, // basic quantum ops
+  MovImm,
+  Mov,
+  Add,
+  Sub,
+  Mul,
+  Div, // basic classical vm opps
+  CmpEq,
+  CmpNe,
+  CmpLt,
+  CmpLe,
+  CmpGt,
+  CmpGe, // classical comparisons - 0 or 1
+  Jmp,
+  JmpIfZero,
+  JmpIfNonZero, // control flow, relative to pc
+  Push,
+  Pop,
+  ArgLoad,
+  Call,
+  Ret, // call stack stuff - recursion
+  GateR1,
+  GateR2,
+  InitR,
+  MeasureR, // dynamic qubit/bit addressing
+  End       // end of code
 };
 
-struct Instruction { // machine code instructions
-    OpCode op = OpCode::Gate; // op code defaults to a gate
-    GateID gate = GateID::I; // default gate is identity - does nothing as a fallback
-    std::optional<size_t> control; // optional control index
-    std::optional<double> parameter; // optional parameter - for rotations and phase
-    size_t target = 0; // target index
-    size_t bit = 0; // target bit - measuring, etc
+struct Instruction {        // machine code instructions
+  OpCode op = OpCode::Gate; // op code defaults to a gate
+  GateID gate =
+      GateID::I; // default gate is identity - does nothing as a fallback
+  std::optional<size_t> control; // optional control index
+  std::optional<double>
+      parameter;          // optional parameter - for rotations and phase
+  size_t targetQubit = 0; // target qubit index
+  size_t targetBit = 0;   // target bit - measuring, etc
 
-    size_t dst = 0; // destionation register
-    size_t src1 = 0; // source register (first input value)
-    size_t src2 = 0; // source register (second input value)
-    long long imm = 0; // immediate = constant value, not in a register - hard-coded
+  size_t dst = 0;  // destionation register
+  size_t src1 = 0; // source register (first input value)
+  size_t src2 = 0; // source register (second input value)
+  long long imm =
+      0; // immediate = constant value, not in a register - hard-coded
 };
 
 #endif
