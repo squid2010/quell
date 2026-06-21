@@ -1,11 +1,13 @@
 #include "Statevector.hpp"
 
 #include <cmath>
+#include <random>
 #include <utility>
 
 void Statevector::initialize(size_t numQubits) {
   amplitudes.assign(1ULL << numQubits,
                     0); // resize to 2 amplitudes for each qubit, set all to 0
+  amplitudes[0] = 1.0;  // |00...0>
 }
 
 void Statevector::applyX(size_t targetQubit) {
@@ -91,6 +93,61 @@ void Statevector::applyCX(size_t controlQubit,
       }
     }
   }
+}
+
+bool Statevector::measure(size_t targetQubit) {
+  size_t stride = 1ULL << targetQubit;
+  double prob1 = 0.0; // probability of measuring 1
+
+  for (size_t i = 0; i < amplitudes.size(); i += (stride << 1)) {
+    for (size_t j = 0; j < stride; ++j) {
+      size_t idx1 = i + j + stride;
+
+      prob1 += std::norm(amplitudes[idx1]); // normalize to get probability
+    }
+  }
+
+  static std::random_device rd;
+  static std::mt19937 gen(rd()); // use marsen twister 19937
+  std::uniform_real_distribution<double> dis(0.0, 1.0);
+  double rand_val = dis(gen);
+
+  bool outcome = (rand_val < prob1); // rand_val < prob1, then is 1, if rand_val
+                                     // > prob 1, then is 0/false
+
+  if (outcome) { // if is 1
+    double norm_factor =
+        1.0 /
+        std::sqrt(
+            prob1); // normalization factor to apply to indices where it was 1
+
+    for (size_t i = 0; i < amplitudes.size(); i += (stride << 1)) {
+      for (size_t j = 0; j < stride; ++j) {
+        size_t idx0 = i + j;
+        size_t idx1 = idx0 + stride;
+
+        amplitudes[idx0] = 0.0; // zero out all the indices with 0 as result
+        amplitudes[idx1] *= norm_factor; // renormalize
+      }
+    }
+  } else { // if it is 0
+    double norm_factor =
+        1.0 /
+        std::sqrt(
+            1.0 -
+            prob1); // normalization factor to apply to indices where it was 0
+
+    for (size_t i = 0; i < amplitudes.size(); i += (stride << 1)) {
+      for (size_t j = 0; j < stride; ++j) {
+        size_t idx0 = i + j;
+        size_t idx1 = idx0 + stride;
+
+        amplitudes[idx1] = 0.0;          // zero out all 1 indices
+        amplitudes[idx0] *= norm_factor; // renormalize
+      }
+    }
+  }
+  return outcome;
 }
 
 size_t Statevector::numQubits() const {

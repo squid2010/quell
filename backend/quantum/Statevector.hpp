@@ -19,6 +19,8 @@ public:
   void applyH(size_t targetQubit);                       // apply Hadamard gate
   void applyCX(size_t controlQubit, size_t targetQubit); // apply CX gate
 
+  bool measure(size_t targetQubit);
+
   size_t numQubits() const;
 };
 
