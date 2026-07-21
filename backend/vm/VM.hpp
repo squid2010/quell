@@ -19,6 +19,8 @@ private:
   std::vector<ClassicalRegister> cRegs; // list of classical registers
   std::vector<QuantumRegister> qRegs;   // list of quantum registers
   std::vector<StackFrame> callStack;    // for tracking function calls
+
+  size_t resolveQubit(const Address &addr) const; // resolve a qubit's address
 };
 
 #endif

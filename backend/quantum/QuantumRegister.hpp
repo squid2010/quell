@@ -9,6 +9,8 @@ public:
   size_t id;    // name of register
   size_t start; // start of which qubits it owns
   size_t size;  // how many qubits it owns
+
+  size_t physicalIndex(size_t offset) const; // actual physical index of qubit
 };
 
 #endif

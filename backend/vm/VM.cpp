@@ -1,6 +1,9 @@
 #include "VM.hpp"
 
-#include <iostream>
+size_t
+VM::resolveQubit(const Address &addr) const { // return global index of qubit
+  return qRegs.at(addr.reg).physicalIndex(addr.index);
+}
 
 void VM::run(const Program &program) { // run code
   pc = 0;                              // program counter
@@ -17,23 +20,23 @@ void VM::run(const Program &program) { // run code
     case OpCode::Gate:
       switch (inst.gate) {
       case GateID::X:
-        state.applyX(inst.targetQubit);
+        state.applyX(resolveQubit(inst.qubit));
         break;
 
       case GateID::Y:
-        state.applyY(inst.targetQubit);
+        state.applyY(resolveQubit(inst.qubit));
         break;
 
       case GateID::Z:
-        state.applyZ(inst.targetQubit);
+        state.applyZ(resolveQubit(inst.qubit));
         break;
 
       case GateID::H:
-        state.applyH(inst.targetQubit);
+        state.applyH(resolveQubit(inst.qubit));
         break;
 
       case GateID::CX:
-        state.applyCX(*inst.control, inst.targetQubit);
+        state.applyCX(resolveQubit(*inst.control), resolveQubit(inst.qubit));
         break;
 
       default:
@@ -42,10 +45,9 @@ void VM::run(const Program &program) { // run code
       break;
 
     case OpCode::Measure: {
-      bool result = state.measure(inst.targetQubit);
+      bool result = state.measure(resolveQubit(inst.qubit));
 
-      // temporarily print
-      std::cout << result << '\n'; // TODO: make this get saved to a creg
+      cRegs[inst.bit.reg].set(inst.bit.index, result); // save result to creg
     } break;
 
     case OpCode::End: // if at end, end code

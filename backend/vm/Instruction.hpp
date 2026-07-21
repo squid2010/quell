@@ -53,15 +53,22 @@ enum class OpCode { // op codes (duh)
   End       // end of code
 };
 
+struct Address { // address for a reference to a bit/qubit
+  size_t reg;    // register
+  size_t index;  // actual index in register
+};
+
 struct Instruction {        // machine code instructions
   OpCode op = OpCode::Gate; // op code defaults to a gate
   GateID gate =
       GateID::I; // default gate is identity - does nothing as a fallback
-  std::optional<size_t> control; // optional control index
   std::optional<double>
-      parameter;          // optional parameter - for rotations and phase
-  size_t targetQubit = 0; // target qubit index
-  size_t targetBit = 0;   // target bit - measuring, etc
+      parameter; // optional parameter - for rotations and phase
+
+  Address qubit; // target qubit
+  Address bit;   // target bit - measuring, etc
+
+  std::optional<Address> control; // control qubit index
 
   size_t dst = 0;  // destionation register
   size_t src1 = 0; // source register (first input value)
