@@ -75,6 +75,9 @@ struct Instruction {        // machine code instructions
   size_t src2 = 0; // source register (second input value)
   long long imm =
       0; // immediate = constant value, not in a register - hard-coded
+
+  size_t targetQubit() const { return qubit.index; }
+  size_t targetBit() const { return bit.index; }
 };
 
 #endif

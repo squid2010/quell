@@ -10,8 +10,8 @@ TEST(InstructionTest, DefaultConstructor) {
   EXPECT_FALSE(inst.control.has_value());
   EXPECT_FALSE(inst.parameter.has_value());
 
-  EXPECT_EQ(inst.targetQubit, 0u);
-  EXPECT_EQ(inst.targetBit, 0u);
+  EXPECT_EQ(inst.targetQubit(), 0u);
+  EXPECT_EQ(inst.targetBit(), 0u);
 
   EXPECT_EQ(inst.dst, 0u);
   EXPECT_EQ(inst.src1, 0u);
@@ -25,11 +25,12 @@ TEST(InstructionTest, QuantumGateInstruction) {
 
   inst.op = OpCode::Gate;
   inst.gate = GateID::H;
-  inst.targetQubit = 3;
+  inst.qubit.reg = 0;
+  inst.qubit.index = 3;
 
   EXPECT_EQ(inst.op, OpCode::Gate);
   EXPECT_EQ(inst.gate, GateID::H);
-  EXPECT_EQ(inst.targetQubit, 3u);
+  EXPECT_EQ(inst.targetQubit(), 3u);
 
   EXPECT_FALSE(inst.control.has_value());
   EXPECT_FALSE(inst.parameter.has_value());
@@ -40,14 +41,15 @@ TEST(InstructionTest, ControlledGateInstruction) {
 
   inst.op = OpCode::Gate;
   inst.gate = GateID::CX;
-  inst.control = 1;
-  inst.targetQubit = 4;
+  inst.control = {1, 0};
+  inst.qubit.reg = 0;
+  inst.qubit.index = 4;
 
   ASSERT_TRUE(inst.control.has_value());
 
   EXPECT_EQ(inst.gate, GateID::CX);
-  EXPECT_EQ(inst.control.value(), 1u);
-  EXPECT_EQ(inst.targetQubit, 4u);
+  EXPECT_EQ(inst.control.value().reg, 1u);
+  EXPECT_EQ(inst.targetQubit(), 4u);
 }
 
 TEST(InstructionTest, ParameterizedGateInstruction) {
@@ -56,21 +58,24 @@ TEST(InstructionTest, ParameterizedGateInstruction) {
   inst.op = OpCode::Gate;
   inst.gate = GateID::RZ;
   inst.parameter = 3.141592653589793;
-  inst.targetQubit = 2;
+  inst.qubit.reg = 0;
+  inst.qubit.index = 2;
 
   ASSERT_TRUE(inst.parameter.has_value());
 
   EXPECT_EQ(inst.gate, GateID::RZ);
   EXPECT_DOUBLE_EQ(inst.parameter.value(), 3.141592653589793);
-  EXPECT_EQ(inst.targetQubit, 2u);
+  EXPECT_EQ(inst.targetQubit(), 2u);
 }
 
 TEST(InstructionTest, MeasureInstruction) {
   Instruction inst;
 
   inst.op = OpCode::Measure;
-  inst.targetQubit = 5;
-  inst.targetBit = 1;
+  inst.qubit.reg = 0;
+  inst.qubit.index = 5;
+  inst.bit.reg = 0;
+  inst.bit.index = 1;
 
   EXPECT_EQ(inst.op, OpCode::Measure);
   EXPECT_EQ(inst.targetQubit, 5u);
@@ -119,7 +124,7 @@ TEST(InstructionTest, DynamicQuantumInstruction) {
   inst.op = OpCode::GateR2;
   inst.gate = GateID::CX;
   inst.src1 = 3; // control register
-  inst.src2 = 4; // targetQubitregister
+  inst.src2 = 4; // target register
 
   EXPECT_EQ(inst.op, OpCode::GateR2);
   EXPECT_EQ(inst.gate, GateID::CX);

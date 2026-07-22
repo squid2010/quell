@@ -78,6 +78,135 @@ void Statevector::applyH(size_t targetQubit) {
   }
 }
 
+void Statevector::applyS(size_t targetQubit) {
+  size_t stride = 1ULL << targetQubit; // spacing to find where target qubit is 1
+
+  for (size_t i = 0; i < amplitudes.size(); i += (stride << 1)) {
+    for (size_t j = 0; j < stride; ++j) {
+      size_t idx1 = i + j + stride; // index where targetQubit is 1
+
+      amplitudes[idx1] *= std::complex<double>(0, 1); // apply phase i
+    }
+  }
+}
+
+void Statevector::applyT(size_t targetQubit) {
+  size_t stride = 1ULL << targetQubit; // spacing to find where target qubit is 1
+
+  const double sqrt2 = std::sqrt(2.0);
+  const double factor = 1.0 / sqrt2; // 1/sqrt(2)
+
+  for (size_t i = 0; i < amplitudes.size(); i += (stride << 1)) {
+    for (size_t j = 0; j < stride; ++j) {
+      size_t idx1 = i + j + stride; // index where targetQubit is 1
+
+      amplitudes[idx1] *= std::complex<double>(factor, factor); // apply phase exp(i*pi/4)
+    }
+  }
+}
+
+void Statevector::applySDG(size_t targetQubit) {
+  size_t stride = 1ULL << targetQubit; // spacing to find where target qubit is 1
+
+  for (size_t i = 0; i < amplitudes.size(); i += (stride << 1)) {
+    for (size_t j = 0; j < stride; ++j) {
+      size_t idx1 = i + j + stride; // index where targetQubit is 1
+
+      amplitudes[idx1] *= std::complex<double>(0, -1); // apply phase -i
+    }
+  }
+}
+
+void Statevector::applyTDG(size_t targetQubit) {
+  size_t stride = 1ULL << targetQubit; // spacing to find where target qubit is 1
+
+  const double sqrt2 = std::sqrt(2.0);
+  const double factor = 1.0 / sqrt2; // 1/sqrt(2)
+
+  for (size_t i = 0; i < amplitudes.size(); i += (stride << 1)) {
+    for (size_t j = 0; j < stride; ++j) {
+      size_t idx1 = i + j + stride; // index where targetQubit is 1
+
+      amplitudes[idx1] *= std::complex<double>(factor, -factor); // apply phase exp(-i*pi/4)
+    }
+  }
+}
+
+void Statevector::applyRX(size_t targetQubit, double angle) {
+  size_t stride = 1ULL << targetQubit; // spacing to find where target qubit is 1
+
+  const double cos_a = std::cos(angle / 2.0);
+  const double sin_a = std::sin(angle / 2.0);
+
+  for (size_t i = 0; i < amplitudes.size(); i += (stride << 1)) {
+    for (size_t j = 0; j < stride; ++j) {
+      size_t idx0 = i + j;
+      size_t idx1 = idx0 + stride;
+
+      // cache values
+      std::complex<double> val0 = amplitudes[idx0];
+      std::complex<double> val1 = amplitudes[idx1];
+
+      amplitudes[idx0] = val0 * cos_a - val1 * std::complex<double>(0, sin_a);
+      amplitudes[idx1] = val1 * cos_a - val0 * std::complex<double>(0, sin_a);
+    }
+  }
+}
+
+void Statevector::applyRY(size_t targetQubit, double angle) {
+  size_t stride = 1ULL << targetQubit; // spacing to find where target qubit is 1
+
+  const double cos_a = std::cos(angle / 2.0);
+  const double sin_a = std::sin(angle / 2.0);
+
+  for (size_t i = 0; i < amplitudes.size(); i += (stride << 1)) {
+    for (size_t j = 0; j < stride; ++j) {
+      size_t idx0 = i + j;
+      size_t idx1 = idx0 + stride;
+
+      // cache values
+      std::complex<double> val0 = amplitudes[idx0];
+      std::complex<double> val1 = amplitudes[idx1];
+
+      amplitudes[idx0] = val0 * cos_a - val1 * std::complex<double>(sin_a, 0);
+      amplitudes[idx1] = val1 * cos_a + val0 * std::complex<double>(sin_a, 0);
+    }
+  }
+}
+
+void Statevector::applyRZ(size_t targetQubit, double angle) {
+  size_t stride = 1ULL << targetQubit; // spacing to find where target qubit is 1
+
+  for (size_t i = 0; i < amplitudes.size(); i += (stride << 1)) {
+    for (size_t j = 0; j < stride; ++j) {
+      size_t idx0 = i + j;
+      size_t idx1 = idx0 + stride;
+
+      // cache values
+      std::complex<double> val0 = amplitudes[idx0];
+      std::complex<double> val1 = amplitudes[idx1];
+
+      double phase0 = -angle / 2.0;
+      double phase1 = angle / 2.0;
+
+      amplitudes[idx0] = val0 * std::exp(std::complex<double>(0, phase0));
+      amplitudes[idx1] = val1 * std::exp(std::complex<double>(0, phase1));
+    }
+  }
+}
+
+void Statevector::applyPhase(size_t targetQubit, double angle) {
+  size_t stride = 1ULL << targetQubit; // spacing to find where target qubit is 1
+
+  for (size_t i = 0; i < amplitudes.size(); i += (stride << 1)) {
+    for (size_t j = 0; j < stride; ++j) {
+      size_t idx1 = i + j + stride; // index where targetQubit is 1
+
+      amplitudes[idx1] *= std::exp(std::complex<double>(0, angle)); // apply global phase
+    }
+  }
+}
+
 void Statevector::applyCX(size_t controlQubit,
                           size_t targetQubit) { // TODO: optimize to remove if
   size_t stride = 1ULL << targetQubit;          // spacing

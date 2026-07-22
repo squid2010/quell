@@ -27,7 +27,8 @@ TEST(BellState, CorrelatedMeasurements) {
       Instruction inst;
       inst.op = OpCode::Gate;
       inst.gate = GateID::H;
-      inst.targetQubit = 0;
+      inst.qubit.reg = 0;
+      inst.qubit.index = 0;
       program.instructions.push_back(inst);
     }
 
@@ -36,8 +37,9 @@ TEST(BellState, CorrelatedMeasurements) {
       Instruction inst;
       inst.op = OpCode::Gate;
       inst.gate = GateID::CX;
-      inst.control = 0;
-      inst.targetQubit = 1;
+      inst.control = {0, 0};
+      inst.qubit.reg = 0;
+      inst.qubit.index = 1;
       program.instructions.push_back(inst);
     }
 
@@ -45,7 +47,8 @@ TEST(BellState, CorrelatedMeasurements) {
     {
       Instruction inst;
       inst.op = OpCode::Measure;
-      inst.targetQubit = 0;
+      inst.qubit.reg = 0;
+      inst.qubit.index = 0;
       program.instructions.push_back(inst);
     }
 
@@ -53,7 +56,8 @@ TEST(BellState, CorrelatedMeasurements) {
     {
       Instruction inst;
       inst.op = OpCode::Measure;
-      inst.targetQubit = 1;
+      inst.qubit.reg = 0;
+      inst.qubit.index = 1;
       program.instructions.push_back(inst);
     }
 
