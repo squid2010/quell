@@ -56,6 +56,9 @@ enum class OpCode { // op codes (duh)
 struct Address { // address for a reference to a bit/qubit
   size_t reg;    // register
   size_t index;  // actual index in register
+
+  Address() : reg(0), index(0) {} // default constructor
+  Address(size_t r, size_t i) : reg(r), index(i) {} // parameterized constructor
 };
 
 struct Instruction {        // machine code instructions

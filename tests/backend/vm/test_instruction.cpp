@@ -41,7 +41,7 @@ TEST(InstructionTest, ControlledGateInstruction) {
 
   inst.op = OpCode::Gate;
   inst.gate = GateID::CX;
-  inst.control = {1, 0};
+  inst.control = std::optional<Address>(Address{1, 0});
   inst.qubit.reg = 0;
   inst.qubit.index = 4;
 
@@ -78,8 +78,8 @@ TEST(InstructionTest, MeasureInstruction) {
   inst.bit.index = 1;
 
   EXPECT_EQ(inst.op, OpCode::Measure);
-  EXPECT_EQ(inst.targetQubit, 5u);
-  EXPECT_EQ(inst.targetBit, 1u);
+  EXPECT_EQ(inst.targetQubit(), 5u);
+  EXPECT_EQ(inst.targetBit(), 1u);
 }
 
 TEST(InstructionTest, ClassicalImmediateInstruction) {

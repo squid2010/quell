@@ -37,7 +37,7 @@ TEST(BellState, CorrelatedMeasurements) {
       Instruction inst;
       inst.op = OpCode::Gate;
       inst.gate = GateID::CX;
-      inst.control = {0, 0};
+      inst.control = std::optional<Address>(Address{0, 0});
       inst.qubit.reg = 0;
       inst.qubit.index = 1;
       program.instructions.push_back(inst);

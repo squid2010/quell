@@ -23,6 +23,7 @@ include(GoogleTest)
 
 add_library(quell_vm
     backend/classical/ClassicalRegister.cpp
+    backend/quantum/QuantumRegister.cpp
     backend/quantum/Statevector.cpp
     backend/vm/VM.cpp
 )
