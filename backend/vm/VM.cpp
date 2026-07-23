@@ -155,6 +155,68 @@ void VM::run(const Program &program) { // run code
       cRegs[inst.bit.reg].set(inst.bit.index, result); // save result to creg
     } break;
 
+    case OpCode::Add: {
+      long long src1_val = cRegs[inst.src1].get(inst.src2);
+      long long src2_val = cRegs[inst.dst].get(inst.src2);
+      cRegs[inst.dst].set(0, src1_val + src2_val);
+    } break;
+
+    case OpCode::Sub: {
+      long long src1_val = cRegs[inst.src1].get(inst.src2);
+      long long src2_val = cRegs[inst.dst].get(inst.src2);
+      cRegs[inst.dst].set(0, src1_val - src2_val);
+    } break;
+
+    case OpCode::Mul: {
+      long long src1_val = cRegs[inst.src1].get(inst.src2);
+      long long src2_val = cRegs[inst.dst].get(inst.src2);
+      cRegs[inst.dst].set(0, src1_val * src2_val);
+    } break;
+
+    case OpCode::Div: {
+      long long src1_val = cRegs[inst.src1].get(inst.src2);
+      long long src2_val = cRegs[inst.dst].get(inst.src2);
+      if (src2_val != 0) {
+        cRegs[inst.dst].set(0, src1_val / src2_val);
+      }
+    } break;
+
+    case OpCode::CmpEq: {
+      long long src1_val = cRegs[inst.src1].get(inst.src2);
+      long long src2_val = cRegs[inst.dst].get(inst.src2);
+      cRegs[inst.dst].set(0, (src1_val == src2_val) ? 1 : 0);
+    } break;
+
+    case OpCode::CmpNe: {
+      long long src1_val = cRegs[inst.src1].get(inst.src2);
+      long long src2_val = cRegs[inst.dst].get(inst.src2);
+      cRegs[inst.dst].set(0, (src1_val != src2_val) ? 1 : 0);
+    } break;
+
+    case OpCode::CmpLt: {
+      long long src1_val = cRegs[inst.src1].get(inst.src2);
+      long long src2_val = cRegs[inst.dst].get(inst.src2);
+      cRegs[inst.dst].set(0, (src1_val < src2_val) ? 1 : 0);
+    } break;
+
+    case OpCode::CmpLe: {
+      long long src1_val = cRegs[inst.src1].get(inst.src2);
+      long long src2_val = cRegs[inst.dst].get(inst.src2);
+      cRegs[inst.dst].set(0, (src1_val <= src2_val) ? 1 : 0);
+    } break;
+
+    case OpCode::CmpGt: {
+      long long src1_val = cRegs[inst.src1].get(inst.src2);
+      long long src2_val = cRegs[inst.dst].get(inst.src2);
+      cRegs[inst.dst].set(0, (src1_val > src2_val) ? 1 : 0);
+    } break;
+
+    case OpCode::CmpGe: {
+      long long src1_val = cRegs[inst.src1].get(inst.src2);
+      long long src2_val = cRegs[inst.dst].get(inst.src2);
+      cRegs[inst.dst].set(0, (src1_val >= src2_val) ? 1 : 0);
+    } break;
+
     case OpCode::End: // if at end, end code
       return;
 

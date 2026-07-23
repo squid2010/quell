@@ -61,6 +61,7 @@ When developing in this codebase:
 3. Extend quantum operations in `Statevector.hpp/cpp`
 4. Run tests using `ctest` in the build directory
 5. Follow existing patterns for test structure and naming conventions
+6. Model the tests around the code, not the other way around.
 
 ## Testing Approach
 
